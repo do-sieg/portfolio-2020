@@ -12,8 +12,9 @@ export default function Home() {
                 <ProjectGallery category="personal" list={projects_data} />
             </section>
 
-            <section>
+            <section className="client-projects">
                 <h2>Réalisations clientèle</h2>
+                <p>N'apparaissent ici que les projets publiés par les clients</p>
                 <ProjectGallery category="customer" list={projects_data} />
             </section>
 

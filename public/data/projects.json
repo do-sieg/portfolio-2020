@@ -4,24 +4,24 @@
         "type": "personal",
         "name": "Saleth.fr",
         "desc": "Blog et journal d'une équipe de développement de jeu. Régulièrement mis à jour.",
-        "image": "images/projects/saleth.png",
-        "image_hover": "images/projects/saleth_hover.png",
+        "image": "images/projects/saleth.jpg",
+        "image_hover": "images/projects/saleth_hover.jpg",
         "url_visit": "http://saleth.fr"
     },
     "portfolio": {
         "type": "personal",
         "name": "Daniel Orchanian",
         "desc": "Site personnel présentant mes travaux et actualités.",
-        "image": "images/projects/saleth.png",
-        "image_hover": "images/projects/saleth_hover.png",
+        "image": "images/projects/portfolio.jpg",
+        "image_hover": "images/projects/portfolio_hover.jpg",
         "url_visit_fake": "/"
     },
     "biochem": {
         "type": "customer",
         "name": "Biochem",
         "desc": "Site vitrine de l'Institut de Biochimie de Yerevan.",
-        "image": "images/projects/biochem.png",
-        "image_hover": "images/projects/biochem_hover.png",
+        "image": "images/projects/biochem.jpg",
+        "image_hover": "images/projects/biochem_hover.jpg",
         "url_visit": "http://www.biochem.sci.am"
     }
 }

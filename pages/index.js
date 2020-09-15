@@ -61,19 +61,19 @@ export default function Home() {
     <Layout className="home-page" headTitle={`${DEV_FULLNAME} - Accueil`}>
 
       <section>
-        <p><strong>Bienvenue</strong> sur mon site de présentation.</p>
+        <p><span className="keyword">Bienvenue</span> sur mon site de présentation.</p>
 
         <p>
           {/* A QUI */}
-          Je m'intéresse aux projets de toute sorte. Que vous soyiez une <strong>entreprise</strong> ou un <strong>particulier</strong>,
-          je mets mon expertise et mes compétences <strong>à votre service</strong>.
+          Je m'intéresse aux projets de toute sorte. Que vous soyiez une <span className="keyword">entreprise</span> ou un <span className="keyword">particulier</span>,
+          je mets mon expertise et mes compétences <span className="keyword">à votre service</span>.
         </p>
         {/* ROLES */}{/* TYPES DE TRAVAIL */}
         <p>
-          Je vous <strong>accompagne</strong> pour mener à bien vos projets, vous conseillant en amont, puis en menant le développement jusqu'au déploiement. Seul ou au sein d'une équipe de collaborateurs, <strong>je m'adapte à vos besoins</strong>.
+          Je vous <span className="keyword">accompagne</span> pour mener à bien vos projets, vous conseillant en amont, puis en menant le développement jusqu'au déploiement. Seul ou au sein d'une équipe de collaborateurs, <span className="keyword">je m'adapte à vos besoins</span>.
         </p>
         <p>
-          N'hésitez pas à me contacter pour tout renseignement en cliquant sur <strong>la petite bulle</strong> en haut à droite... <span className="up-right-arrow"><FontAwesomeIcon icon={faArrowUp} /></span><br />
+          N'hésitez pas à me contacter pour tout renseignement en cliquant sur <span className="keyword">la petite bulle</span> en haut à droite... <span className="up-right-arrow"><FontAwesomeIcon icon={faArrowUp} /></span><br />
         </p>
         <p>
           ... ou tout simplement en m'écrivant un email à <a href={U_EMAIL}>{DEV_EMAIL}</a>.

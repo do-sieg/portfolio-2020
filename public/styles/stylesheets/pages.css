@@ -1,0 +1,182 @@
+.error-page-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  background-image: linear-gradient(to right, #333, #4d4d4d);
+}
+.error-page-container .error-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  padding-bottom: 2rem;
+}
+.error-page-container .error-box h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  height: 4.5rem;
+  margin: 0;
+  padding-right: 2rem;
+  border-right: solid 0.2rem #c8c8c8;
+  font-size: 3.5rem;
+  color: #c8c8c8;
+}
+.error-page-container .error-box span {
+  display: flex;
+  align-items: center;
+  flex: 1.1;
+  height: 4.5rem;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  color: #eeeeee;
+}
+@media screen and (max-width: 980px) {
+  .error-page-container .error-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .error-page-container .error-box h1 {
+    width: 15rem;
+    flex: unset;
+    padding: 0;
+    border-right: none;
+    border-bottom: solid 0.2rem #c8c8c8;
+    justify-content: center;
+  }
+  .error-page-container .error-box span {
+    width: 15rem;
+    flex: unset;
+    padding: 0;
+    justify-content: center;
+  }
+}
+.error-page-container a {
+  flex: 1;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  color: #aace86;
+}
+@media screen and (max-width: 980px) {
+  .error-page-container a {
+    max-width: 80%;
+    font-size: 1.1rem;
+  }
+}
+.error-page-container footer a {
+  font-size: initial;
+  color: #aace86;
+  max-width: unset;
+}
+.home-page .keyword {
+  font-weight: bold;
+  color: #333;
+}
+.home-page .up-right-arrow svg {
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(45deg);
+  color: #7a4;
+}
+.home-page a {
+  font-weight: bold;
+  color: #47a;
+}
+.home-page h2 {
+  margin: 2rem 0 0.5rem;
+  text-align: center;
+  font-family: Kufam;
+  color: #446;
+  font-size: 1.75rem;
+}
+@media screen and (max-width: 980px) {
+  .home-page h2 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+.home-page #work-links a {
+  display: block;
+  margin: 0.2rem 0;
+}
+.home-page .skills-desc {
+  text-align: center;
+}
+.home-page .skill-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.home-page .skill-box .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 5rem;
+}
+.home-page .skill-box .skill-item img,
+.home-page .skill-box .skill-item svg {
+  width: 2rem;
+  height: 2rem;
+  color: #333;
+  fill: #333;
+}
+.home-page .skill-box .skill-item label {
+  display: block;
+  margin-top: 0.2rem;
+  font-weight: 500;
+}
+.home-page #news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.home-page #news .news-desc {
+  text-align: center;
+}
+.home-page #news .see-more-btn {
+  max-width: 11rem;
+}
+.projects-page .client-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects-page h2 {
+  text-align: center;
+  font-family: Kufam;
+  color: #446;
+  font-size: 1.75rem;
+}
+@media screen and (max-width: 980px) {
+  .projects-page h2 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+.credits-page .photo-credits-row {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.credits-page .photo-credits-row img {
+  width: 7.5rem;
+  height: 4rem;
+  filter: grayscale(50%);
+}
+.credits-page .photo-credits-row label {
+  margin-left: 0.5rem;
+  color: #333;
+}

@@ -1,12 +1,6 @@
 import { useState } from 'react';
+import bgData from '../public/data/backgrounds.json';
 
-const images = [
-    "images/backgrounds/kace-rodriguez.jpg",
-    "images/backgrounds/james-donaldson.jpg",
-    "images/backgrounds/matthew-henry.jpg",
-    "images/backgrounds/nattu-adnan.jpg",
-    "images/backgrounds/samsommer.jpg",
-]
 
 // MOVE
 function getRandomInt(min, max) {
@@ -19,7 +13,7 @@ const RandomBackground = () => {
     const [imgFile, setImgFile] = useState(getRandomPicture());
 
     function getRandomPicture() {
-        return images[getRandomInt(0, images.length - 1)];
+        return bgData[getRandomInt(0, bgData.length - 1)].path;
     }
 
     return (

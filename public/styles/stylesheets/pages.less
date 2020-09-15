@@ -1,0 +1,214 @@
+@import url('_variables.less');
+
+
+.error-page-container {
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: @error-page-bg;
+    background-image: linear-gradient(to right, @error-page-bg, lighten(@error-page-bg, 10%));
+  
+    .error-box {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        flex: 1;
+        padding-bottom: 2rem;
+    
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+            height: 4.5rem;
+            margin: 0;
+            padding-right: 2rem;
+            border-right: solid 0.2rem lighten(@c-grey, 25%);
+            font-size: 3.5rem;
+            color: lighten(@c-grey, 25%);
+        }
+        span {
+            display: flex;
+            align-items: center;
+            flex: 1.1;
+            height: 4.5rem;
+            padding-left: 2rem;
+            font-size: 1.4rem;
+            color: lighten(@c-grey, 40%);
+        }
+        
+        @media screen and (max-width: 980px) {
+    
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            
+            h1 {
+            width: 15rem;
+            flex: unset;
+            padding: 0;
+            border-right: none;
+            border-bottom: solid 0.2rem lighten(@c-grey, 25%);
+            justify-content: center;
+            }
+            span {
+            width: 15rem;
+            flex: unset;
+            padding: 0;
+            justify-content: center;
+            }
+        }
+        }
+  
+        a {
+        flex: 1;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 1.25rem;
+        color: lighten(@c-green, 20%);
+        
+        @media screen and (max-width: 980px) {
+            max-width: 80%;
+            font-size: 1.1rem;
+        }
+        }
+    
+        footer {
+        // color: @c-grey;
+        a {
+            font-size: initial;
+            color: lighten(@c-green, 20%);
+            max-width: unset;
+        }
+    }
+}
+
+.home-page {
+    .keyword {
+        font-weight: bold;
+        color: @c-black;
+    }
+    .up-right-arrow {
+        svg {
+            width: 1rem;
+            height: 1rem;
+            transform: rotate(45deg);
+            color: @c-green;
+        }
+    }
+    a {
+        font-weight: bold;
+        color: @c-blue;
+    }
+  
+    h2 {
+        margin: 2rem 0 0.5rem;
+        text-align: center;
+        font-family: @title-font;
+        color: @text-secondary;
+        font-size: 1.75rem;
+        @media screen and (max-width: 980px) {
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.5rem;
+        }
+    }
+  
+    #work-links {
+        a {
+            display: block;
+            margin: 0.2rem 0;
+        }
+    }
+  
+    .skills-desc {
+        text-align: center;
+    }
+  
+    .skill-box {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 40rem;
+        margin: 0 auto;
+    
+        // background: chartreuse;
+        .skill-item {
+            // margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 6rem;
+            height: 5rem;
+            img, svg {
+                width: 2rem;
+                height: 2rem;
+                color: @c-black;
+                fill: @c-black;
+            }
+            label {
+                display: block;
+                margin-top: 0.2rem;
+                font-weight: 500;
+            }
+        }
+  
+    }
+  
+    #news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+    
+        .news-desc {
+            text-align: center;
+        }
+        .see-more-btn {
+            max-width: 11rem;
+        }
+    }
+  
+}
+
+.projects-page {
+    .client-projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2 {
+        text-align: center;
+        font-family: @title-font;
+        color: @text-secondary;
+        font-size: 1.75rem;
+        @media screen and (max-width: 980px) {
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.credits-page {
+    .photo-credits-row {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        img {
+            width: 7.5rem;
+            height: 4rem;
+            filter: grayscale(50%);
+        }
+        label {
+            margin-left: 0.5rem;
+            // font-weight: bold;
+            color: @c-black;
+        }
+    }
+}

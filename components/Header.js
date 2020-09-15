@@ -3,7 +3,7 @@ import { DEV_FULLNAME } from "../config/constants";
 const Header = () => (
     <header>
         <div className="profile-picture">
-            <img src="../images/profile/profile_01.jpg" />
+            <img src="../images/profile/profile_02.jpg" />
         </div>
         <div className="profile-description">
             <h1>{DEV_FULLNAME}</h1>
