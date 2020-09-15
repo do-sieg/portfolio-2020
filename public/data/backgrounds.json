@@ -1,7 +1,10 @@
 [
-    { "author": "Kace Rodriguez (Unsplash)", "path": "images/backgrounds/kace-rodriguez.jpg" },
     { "author": "James Donaldson (Unsplash)", "path": "images/backgrounds/james-donaldson.jpg" },
     { "author": "Matthew Henry (Unsplash)", "path": "images/backgrounds/matthew-henry.jpg" },
-    { "author": "Nattu Adnan (Unsplash)", "path": "images/backgrounds/nattu-adnan.jpg" },
-    { "author": "Samsommer (Unsplash)", "path": "images/backgrounds/samsommer.jpg" }
+    { "author": "Kace Rodriguez (Unsplash)", "path": "images/backgrounds/kace-rodriguez.jpg" },
+    { "author": "Ronit Shaked (Unsplash)", "path": "images/backgrounds/ronit-shaked.jpg" },
+    { "author": "Juliana Chyzhova (Unsplash)", "path": "images/backgrounds/juliana-chyzhova.jpg" },
+    { "author": "Samsommer (Unsplash)", "path": "images/backgrounds/samsommer.jpg" },
+    { "author": "Pascal M. (Unsplash)", "path": "images/backgrounds/pascal-m.jpg" },
+    { "author": "Nattu Adnan (Unsplash)", "path": "images/backgrounds/nattu-adnan.jpg" }
 ]

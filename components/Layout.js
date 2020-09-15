@@ -1,13 +1,13 @@
 import Head from './Head';
 import Header from './Header';
-import RandomBackground from './RandomBackground';
-import Menu, { MENU_ROTATION_FIRST_LOAD_ONLY } from './Menu';
+import DailyBackground from './DailyBackground';
+import Menu, { MENU_ROTATION_ACTIVE } from './Menu';
 import Footer from './Footer';
 import ContactMeBox from './ContactMeBox';
 import { useEffect } from 'react';
 
 const Layout = ({ children, className, headTitle }) => {
-    let isMenuOpening = !MENU_ROTATION_FIRST_LOAD_ONLY;
+    let isMenuOpening = MENU_ROTATION_ACTIVE;
 
     useEffect(() => {
         setTimeout(() => {
@@ -25,11 +25,11 @@ const Layout = ({ children, className, headTitle }) => {
             <Header />
             <Menu isOpening={isMenuOpening} />
             <ContactMeBox />
-            <RandomBackground />
+            <DailyBackground />
 
             <main>
                 <div className="page-container">
-                    <div className={"page-wrapper opening " + (className ? className : "")}>
+                    <div className={"page-wrapper " + (className ? className : "")}>
                         {children}
                     </div>
                 </div>

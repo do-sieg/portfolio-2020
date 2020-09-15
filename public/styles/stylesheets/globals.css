@@ -24,15 +24,6 @@ a {
   src: url('/styles/fonts/kufam.woff') format('woff'), /* Pretty Modern Browsers */ url('/styles/fonts/kufam.ttf') format('truetype');
   /* Safari, Android, iOS */
 }
-.random-background {
-  width: 100%;
-  min-height: 100vh;
-  position: fixed;
-  z-index: -1000;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.5;
-}
 main {
   display: flex;
   flex-direction: column;

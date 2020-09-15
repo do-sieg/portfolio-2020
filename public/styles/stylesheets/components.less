@@ -221,16 +221,12 @@ footer {
   
     &.opening {
         animation-name: rotate-menu-open;
-        // animation-duration: @rotating-menu-anim-duration;
-        // animation-delay: @rotating-menu-anim-delay;
         animation-fill-mode: forwards;
         transform: rotate(-90deg);
     }
   
     &.closing {
         animation-name: rotate-menu-close;
-        // animation-duration: @rotating-menu-anim-duration;
-        // animation-delay: @rotating-menu-anim-delay;
         animation-fill-mode: forwards;
         transform: rotate(0deg);
     }
@@ -622,4 +618,13 @@ footer {
         }
     }
 }
-  
+
+.daily-background {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    z-index: -1000;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import NavLink from './NavLink';
 
-export const MENU_ROTATION_FIRST_LOAD_ONLY = true;
+export const MENU_ROTATION_ACTIVE = false;
 export const MENU_ROTATION_DURATION = 0.8;
 export const MENU_ROTATION_DELAY = 0.5;
 
@@ -25,7 +25,7 @@ const Menu = ({ isOpening }) => {
         <div className="side-menu-container">
             <div
                 id="rotating-menu"
-                className={"side-menu-container rotating-menu " + (isOpening || !MENU_ROTATION_FIRST_LOAD_ONLY ? " opening" : "")}
+                className={"side-menu-container rotating-menu " + (isOpening ? " opening" : "")}
                 style={{
                     animationDuration: `${MENU_ROTATION_DURATION}s`,
                     animationDelay: `${MENU_ROTATION_DELAY}s`,
