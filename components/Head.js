@@ -21,7 +21,7 @@ const Head = ({ customTitle = DEV_FULLNAME }) => {
             <meta property="og:title" content={customTitle} />
             <meta property="og:description" content={T_OG_DESC} />
             {/* <meta property="og:image" content={ogImageUrl} /> */}
-            <meta property="og:image" content="/favicon.png" />
+            <meta property="og:image" content="https://danielorchanian.fr/favicon.png" />
             {/* <link href="/styles/globals.css" rel="stylesheet"></link> */}
             {/* <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;500;600;700&display=swap" rel="stylesheet" /> */}
             {/* <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" /> */}
