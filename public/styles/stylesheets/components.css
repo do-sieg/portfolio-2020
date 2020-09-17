@@ -568,6 +568,8 @@ footer a {
   top: 0.5rem;
   right: 0.5rem;
   z-index: 5;
+  width: fit-content;
+  height: fit-content;
 }
 @media screen and (max-width: 980px) {
   .lang-selector {
