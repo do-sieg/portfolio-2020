@@ -3,16 +3,7 @@ import { DEV_FULLNAME } from "../config/constants";
 import bgData from '../public/data/backgrounds.json';
 
 export default function Credits() {
-
-    const days = [
-        "Dimanche",
-        "Lundi",
-        "Mardi",
-        "Mercredi",
-        "Jeudi",
-        "Vendredi",
-        "Samedi",
-    ];
+    const days = [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ];
 
     return (
         <Layout className="credits-page" headTitle={`${DEV_FULLNAME} - Crédits`}>

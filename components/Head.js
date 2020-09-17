@@ -18,9 +18,9 @@ const Head = ({ customTitle = DEV_FULLNAME }) => {
             <title>{customTitle}</title>
             <link rel="icon" href="/favicon.png" />
             <meta name="description" content={T_OG_DESC} />
-            <meta name="og:title" content={customTitle} />
-            <meta name="og:description" content={T_OG_DESC} />
-            <meta name="og:image" content={ogImageUrl} />
+            <meta property="og:title" content={customTitle} />
+            <meta property="og:description" content={T_OG_DESC} />
+            <meta property="og:image" content={ogImageUrl} />
             {/* <link href="/styles/globals.css" rel="stylesheet"></link> */}
             {/* <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;500;600;700&display=swap" rel="stylesheet" /> */}
             {/* <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" /> */}
