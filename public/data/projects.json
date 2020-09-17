@@ -3,25 +3,47 @@
     "saleth": {
         "type": "personal",
         "name": "Saleth.fr",
-        "desc": "Blog et journal d'une équipe de développement de jeu. Régulièrement mis à jour.",
-        "image": "images/projects/saleth.jpg",
-        "image_hover": "images/projects/saleth_hover.jpg",
+        "desc": {
+            "fr": "Blog et journal d'une équipe de développement de jeu. Régulièrement mis à jour.",
+            "en": "Blog and journal for a game development team. Regularly updated."
+        },
+        "image": "/images/projects/saleth.jpg",
+        "image_hover": "/images/projects/saleth_hover.jpg",
+        "tech": "PHP",
         "url_visit": "http://saleth.fr"
     },
     "portfolio": {
         "type": "personal",
         "name": "Daniel Orchanian",
-        "desc": "Site personnel présentant mes travaux et actualités.",
-        "image": "images/projects/portfolio.jpg",
-        "image_hover": "images/projects/portfolio_hover.jpg",
+        "desc": {
+            "fr": "Site personnel présentant mes travaux et actualités.",
+            "en": "Personal site presenting my work and news."
+        },
+        "image": "/images/projects/portfolio.jpg",
+        "image_hover": "/images/projects/portfolio_hover.jpg",
+        "tech": "React/NextJS",
         "url_visit_fake": "/"
+    },
+    "autotile_converter": {
+        "type": "personal",
+        "name": "Autotile Converter",
+        "desc": {
+            "fr": "Outil de conversion de ressources graphiques pour Godot.",
+            "en": "Tool for converting graphics resources for Godot."
+        },
+        "tech": "GDScript",
+        "draft": true
     },
     "biochem": {
         "type": "customer",
         "name": "Biochem",
-        "desc": "Site vitrine de l'Institut de Biochimie de Yerevan.",
-        "image": "images/projects/biochem.jpg",
-        "image_hover": "images/projects/biochem_hover.jpg",
+        "desc": {
+            "fr": "Site vitrine de l'Institut de Biochimie de Yerevan.",
+            "en": "Showcase site for the Yerevan Institute of Biochemistry."
+        },
+        "image": "/images/projects/biochem.jpg",
+        "image_hover": "/images/projects/biochem_hover.jpg",
+        "tech": "React",
         "url_visit": "http://www.biochem.sci.am"
     }
 }

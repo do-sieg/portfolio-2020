@@ -1,6 +1,6 @@
 import Modal from 'react-modal';
 import { useState } from 'react';
-import { U_EMAIL, DEV_EMAIL } from '../config/constants';
+import { useLang } from '../utils/Lang';
 
 Modal.setAppElement('#__next');
 
@@ -20,8 +20,9 @@ const modalStyles = {
 };
 
 
-const FeedbackModal = ({ children }) => {
+const FeedbackModal = ({ children, pageLang }) => {
     const [showModal, setShowModal] = useState(false);
+    const lang = useLang(pageLang);
 
     function openModal() {
         setShowModal(true);
@@ -43,24 +44,12 @@ const FeedbackModal = ({ children }) => {
             // contentLabel="Example Modal"
             >
                 <div className="feedback-modal-content long">
-
-                    <h2>Oups... Vous êtes déjà sur ce site</h2>
-                    <p>Cependant, pourquoi ne pas utiliser cette opportunité pour me donner votre avis ?</p>
-                    <p>Vous pouvez me joindre par mail à l'adresse suivante :</p>
-
-                    <a href={U_EMAIL}>{DEV_EMAIL}</a>
-
-                    <button className="btn btn-blue" onClick={closeModal}>Retour</button>
+                    {lang('FEEDBACK_MODAL_TEXT_LONG')}
+                    <button className="btn btn-blue" onClick={closeModal}>{lang('ACTION_BACK')}</button>
                 </div>
                 <div className="feedback-modal-content short">
-
-                    <h2>Vous êtes déjà sur ce site</h2>
-                    <p>Pourquoi ne pas utiliser cette opportunité pour me donner votre avis ?</p>
-                    <p>Vous pouvez me joindre par mail :</p>
-
-                    <a href={U_EMAIL}>{DEV_EMAIL}</a>
-
-                    <button className="btn btn-blue" onClick={closeModal}>Retour</button>
+                    {lang('FEEDBACK_MODAL_TEXT_SHORT')}
+                    <button className="btn btn-blue" onClick={closeModal}>{lang('ACTION_BACK')}</button>
                 </div>
             </Modal>
         </>

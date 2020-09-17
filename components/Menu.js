@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faHome } from '@fortawesome/free-solid-svg-icons';
 import NavLink from './NavLink';
+import { useLang, useLangLink } from '../utils/Lang';
 
 export const MENU_ROTATION_ACTIVE = false;
 export const MENU_ROTATION_DURATION = 0.8;
@@ -20,7 +21,10 @@ export function closeMenu() {
     }
 }
 
-const Menu = ({ isOpening }) => {
+const Menu = ({ isOpening, pageLang }) => {
+    const lang = useLang(pageLang);
+    const langLink = useLangLink(pageLang);
+
     return (
         <div className="side-menu-container">
             <div
@@ -32,8 +36,8 @@ const Menu = ({ isOpening }) => {
                 }}
             >
                 <nav>
-                    <NavLink href="/"><span>Accueil</span><FontAwesomeIcon icon={faHome} /></NavLink>
-                    <NavLink href="/projects"><span>Projets</span><FontAwesomeIcon icon={faProjectDiagram} /></NavLink>
+                    <NavLink href={langLink("/")}><span>{lang('NAV_HOME')}</span><FontAwesomeIcon icon={faHome} /></NavLink>
+                    <NavLink href={langLink("/projects")}><span>{lang('NAV_PROJECTS')}</span><FontAwesomeIcon icon={faBriefcase} /></NavLink>
                 </nav>
             </div>
         </div>

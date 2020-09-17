@@ -9,7 +9,7 @@ const DailyBackground = () => {
     }
 
     return (
-        <div className="daily-background" style={{ backgroundImage: "url(../" + imgFile + ")" }} />
+        <div className="daily-background" style={{ backgroundImage: "url(.." + imgFile + ")" }} />
     );
 }
 

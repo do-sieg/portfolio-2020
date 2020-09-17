@@ -1,12 +1,22 @@
 import Layout from "../components/Layout";
 import { DEV_FULLNAME } from "../config/constants";
 import bgData from '../public/data/backgrounds.json';
+import { useLang } from "../utils/Lang";
 
-export default function Credits() {
-    const days = [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ];
+export default function Credits({ pageLang = "fr" }) {
+    const lang = useLang(pageLang);
+    const days = [
+        lang('DAY_SUNDAY'),
+        lang('DAY_MONDAY'),
+        lang('DAY_TUESDAY'),
+        lang('DAY_WEDNESDAY'),
+        lang('DAY_THURSDAY'),
+        lang('DAY_FRIDAY'),
+        lang('DAY_SATURDAY'),
+    ];
 
     return (
-        <Layout className="credits-page" headTitle={`${DEV_FULLNAME} - Crédits`}>
+        <Layout className="credits-page" headTitle={`${DEV_FULLNAME} - ${lang('NAV_CREDITS')}`} pageLang={pageLang}>
             {[1, 2, 3, 4, 5, 6, 0].map((index) => {
                 const data = bgData[index];
                 return (

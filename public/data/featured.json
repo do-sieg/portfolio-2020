@@ -3,6 +3,10 @@
         {
             "collection": "projects",
             "id": "saleth"
+        },
+        {
+            "collection": "projects",
+            "id": "autotile_converter"
         }
     ]
 }

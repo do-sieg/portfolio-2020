@@ -1,8 +1,10 @@
 import FeedbackModal from './FeedbackModal';
 import { useState } from 'react';
+import { useLang } from '../utils/Lang';
 
-export function ProjectGallery({ category, list }) {
+export function ProjectGallery({ category, list, pageLang = "fr" }) {
     const [hoverIndex, setHoverIndex] = useState();
+    const lang = useLang(pageLang);
 
     function renderProjectLink(data) {
         let href;
@@ -10,11 +12,11 @@ export function ProjectGallery({ category, list }) {
 
         function checkUrlType(type) {
             const texts = {
-                url_visit: "Visiter",
-                url_visit_fake: "Essayer",
-                url_download: "Télécharger",
-                url_try: "Essayer",
-                url_play: "Jouer",
+                url_visit: lang('ACTION_VISIT'),
+                url_visit_fake: lang('ACTION_VISIT_FAKE'),
+                url_download: lang('ACTION_DOWNLOAD'),
+                url_try: lang('ACTION_TRY'),
+                url_play: lang('ACTION_PLAY'),
             };
             if (data.hasOwnProperty(type)) {
                 href = data[type];
@@ -30,21 +32,21 @@ export function ProjectGallery({ category, list }) {
 
         return (
             data['url_visit_fake'] ?
-                <FeedbackModal><button className="btn btn-blue">{text}</button></FeedbackModal>
+                <FeedbackModal pageLang={pageLang}><button className="btn btn-blue">{text}</button></FeedbackModal>
                 :
                 href ? <a className="btn btn-green" href={href} target="_blank">{text}</a> : ""
         );
     }
 
-    let items = Object.values(list)
+    let items = Object.values(list);
     if (category) {
-        items = items.filter(data => data.type === category)
+        items = items.filter(data => data.type === category);
     }
+    items = items.filter(data => data.draft !== true);
 
     return (
         <div className="project-gallery">
             {items.map((data, index) => {
-                // let realIndex = data.type + '_' + index;
                 return (
                     <div
                         key={index}
@@ -54,12 +56,19 @@ export function ProjectGallery({ category, list }) {
                         onBlur={() => setHoverIndex(null)}
                     >
                         <div className="top">
-                            <img src={data.image} />
-                            <img className="second-img" src={data.image_hover} />
+                            {data.image &&
+                                <>
+                                    <img src={data.image} />
+                                    <img className="second-img" src={data.image_hover} />
+                                </>
+                            }
+                            {data.tech &&
+                                <div className="tech-tag">{data.tech}</div>
+                            }
                         </div>
                         <div className="bottom">
                             <h3>{data.name}</h3>
-                            <p>{data.desc}</p>
+                            <p>{data.desc[pageLang]}</p>
                             {renderProjectLink(data)}
                         </div>
                     </div>

@@ -2,20 +2,23 @@ import Layout from "../components/Layout";
 import projects_data from '../public/data/projects.json';
 import { ProjectGallery } from "../components/ProjectGallery";
 import { DEV_FULLNAME } from "../config/constants";
+import { useLang } from "../utils/Lang";
 
-export default function Home() {
+export default function Projects({ pageLang = "fr" }) {
+    const lang = useLang(pageLang);
+
     return (
-        <Layout className="projects-page" headTitle={`${DEV_FULLNAME} - Projets`}>
+        <Layout className="projects-page" headTitle={`${DEV_FULLNAME} - ${lang('NAV_PROJECTS')}`} pageLang={pageLang}>
 
             <section>
-                <h2>Projets actifs</h2>
-                <ProjectGallery category="personal" list={projects_data} />
+                <h2>{lang('ACTIVE_PROJECTS')}</h2>
+                <ProjectGallery category="personal" list={projects_data} pageLang={pageLang} />
             </section>
 
             <section className="client-projects">
-                <h2>Réalisations clientèle</h2>
-                <p>N'apparaissent ici que les projets publiés par les clients</p>
-                <ProjectGallery category="customer" list={projects_data} />
+                <h2>{lang('CLIENT_PROJECTS')}</h2>
+                <p>{lang('CLIENT_PROJECTS_DESC')}</p>
+                <ProjectGallery category="customer" list={projects_data} pageLang={pageLang} />
             </section>
 
         </Layout>

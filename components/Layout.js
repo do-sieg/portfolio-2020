@@ -6,7 +6,7 @@ import Footer from './Footer';
 import ContactMeBox from './ContactMeBox';
 import { useEffect } from 'react';
 
-const Layout = ({ children, className, headTitle }) => {
+const Layout = ({ children, className, headTitle, pageLang = "fr" }) => {
     let isMenuOpening = MENU_ROTATION_ACTIVE;
 
     useEffect(() => {
@@ -22,8 +22,8 @@ const Layout = ({ children, className, headTitle }) => {
     return (
         <>
             <Head customTitle={headTitle} />
-            <Header />
-            <Menu isOpening={isMenuOpening} />
+            <Header pageLang={pageLang} />
+            <Menu pageLang={pageLang} isOpening={isMenuOpening} />
             <ContactMeBox />
             <DailyBackground />
 
@@ -33,7 +33,7 @@ const Layout = ({ children, className, headTitle }) => {
                         {children}
                     </div>
                 </div>
-                <Footer />
+                <Footer pageLang={pageLang} />
             </main>
         </>
     );

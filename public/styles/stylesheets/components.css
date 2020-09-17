@@ -410,8 +410,9 @@ footer a {
   margin: 0 auto;
 }
 .preview-box {
-  width: 15rem;
-  height: 15rem;
+  position: relative;
+  width: 16rem;
+  height: 16rem;
   margin: 1rem 1rem 1.5rem;
   border-radius: 0.65rem;
   box-shadow: 0 0.1rem 0.1rem 0.1rem #0005;
@@ -445,12 +446,27 @@ footer a {
   opacity: 0;
   transition: opacity 1s 0s;
 }
+.preview-box .top .tech-tag {
+  position: absolute;
+  right: 0;
+  bottom: -1.2rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 1.2rem;
+  padding: 0 0.3rem 0 0.8rem;
+  border-bottom-left-radius: calc(1.2rem * 0.25);
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: #bbbbbb;
+  color: #333;
+}
 .preview-box .bottom {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 55%;
-  padding: 0.8rem 1.5rem 2.5rem;
+  padding: 1.5rem 1.5rem 2.5rem;
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
   background-color: #eed;
@@ -545,4 +561,66 @@ footer a {
   background-position: center;
   background-size: cover;
   opacity: 0.5;
+}
+.lang-selector {
+  display: flex;
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 5;
+}
+@media screen and (max-width: 980px) {
+  .lang-selector {
+    flex-direction: column;
+    top: unset;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+}
+.lang-selector a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  width: 2.5rem;
+  height: 2rem;
+  font-family: Kufam;
+  color: white;
+  box-shadow: 0 0.1rem 0.1rem 0.1rem #0003;
+}
+.lang-selector a + a {
+  margin-left: 0.5rem;
+}
+@media screen and (max-width: 980px) {
+  .lang-selector a + a {
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .lang-selector a {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 1rem !important;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 300px) {
+  .lang-selector a {
+    width: 2rem;
+    min-width: 2rem;
+    padding: 0.5rem !important;
+  }
+}
+.lang-selector a.fr {
+  padding-right: 0.8rem;
+  background-color: #47a;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.lang-selector a.en {
+  padding-left: 0.8rem;
+  background-color: #a74;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
