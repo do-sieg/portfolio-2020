@@ -1,13 +1,11 @@
 import Layout from "../components/Layout";
-// import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faCss3Alt, faLess, faJsSquare, faNodeJs, faReact, faPhp } from '@fortawesome/free-brands-svg-icons';
 import { ProjectGallery } from "../components/ProjectGallery";
-// import projectsData from '../public/data/projects.json';
 import featuredData from '../public/data/featured.json';
 import NavLink from "../components/NavLink";
-import { U_LINKEDIN, U_CV, DEV_FULLNAME } from "../config/constants";
+import { U_LINKEDIN, U_CV, DEV_FULLNAME, U_CV_FR, U_CV_EN } from "../config/constants";
 import localIcons from "../assets/icons";
 import { useLang, useLangLink } from "../utils/Lang";
 
@@ -40,8 +38,6 @@ function selectFeatured(type) {
 }
 
 
-
-
 export default function Home({ pageLang = "fr" }) {
   const lang = useLang(pageLang);
   const langLink = useLangLink(pageLang);
@@ -56,6 +52,11 @@ export default function Home({ pageLang = "fr" }) {
     );
   }
 
+  const CVLink = {
+    fr: U_CV_FR,
+    en: U_CV_EN
+  }[pageLang]
+
   return (
     <Layout className="home-page" headTitle={`${DEV_FULLNAME} - ${lang('NAV_HOME')}`} pageLang={pageLang}>
 
@@ -66,7 +67,7 @@ export default function Home({ pageLang = "fr" }) {
       <hr />
 
       <section id="work-links">
-        <a href={U_CV} target="_blank">{lang('CHECK_CV')}</a>
+        <a href={CVLink} target="_blank">{lang('CHECK_CV')}</a>
         <a href={U_LINKEDIN} target="_blank">{lang('CHECK_LINKEDIN')}</a>
       </section>
 
