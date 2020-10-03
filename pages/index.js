@@ -60,16 +60,14 @@ export default function Home({ pageLang = "fr" }) {
   return (
     <Layout className="home-page" headTitle={`${DEV_FULLNAME} - ${lang('NAV_HOME')}`} pageLang={pageLang}>
 
-      <section>
-        {lang("HOME_WELCOME_TEXT")}
-      </section>
+      {lang("HOME_WELCOME_TEXT")}
 
       <hr />
 
-      <section id="work-links">
+      <div id="work-links">
         <a href={CVLink} target="_blank">{lang('CHECK_CV')}</a>
         <a href={U_LINKEDIN} target="_blank">{lang('CHECK_LINKEDIN')}</a>
-      </section>
+      </div>
 
       <hr />
 

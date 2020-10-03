@@ -13,7 +13,7 @@ const Header = ({ pageLang }) => {
             <header>
                 <NavLink href={langLink("/")}>
                     <div className="profile-picture">
-                        <img src="../images/profile/profile_02.jpg" />
+                        <img src="../images/profile/profile_02.jpg" alt="profile-pic" />
                     </div>
                 </NavLink>
                 <div className="profile-description">

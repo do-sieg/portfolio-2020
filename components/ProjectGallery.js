@@ -58,8 +58,8 @@ export function ProjectGallery({ category, list, pageLang = "fr" }) {
                         <div className="top">
                             {data.image &&
                                 <>
-                                    <img src={data.image} />
-                                    <img className="second-img" src={data.image_hover} />
+                                    <img src={data.image} alt={data.name} />
+                                    <img className="second-img" src={data.image_hover} alt={data.name} />
                                 </>
                             }
                             {data.tech &&

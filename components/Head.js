@@ -1,6 +1,5 @@
 import NextHead from 'next/head';
 import { DEV_FULLNAME, T_OG_DESC } from '../config/constants';
-import { useEffect, useState } from 'react';
 
 function getUrlBase() {
     return window.location.protocol + '//' + window.location.host + '/';
