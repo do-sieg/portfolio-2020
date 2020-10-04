@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import Layout from "../components/Layout";
 import { DEV_FULLNAME } from "../config/constants";
 import bgData from '../public/data/backgrounds.json';
-import { useLang } from "../utils/Lang";
+import { LangContext, useLang } from "../utils/Lang";
 
-export default function Credits({ pageLang = "fr" }) {
+export default function Credits() {
+    const pageLang = useContext(LangContext);
     const lang = useLang(pageLang);
     const days = [
         lang('DAY_SUNDAY'),
@@ -16,7 +18,7 @@ export default function Credits({ pageLang = "fr" }) {
     ];
 
     return (
-        <Layout className="credits-page" headTitle={`${DEV_FULLNAME} - ${lang('NAV_CREDITS')}`} pageLang={pageLang}>
+        <Layout className="credits-page" headTitle={`${DEV_FULLNAME} - ${lang('NAV_CREDITS')}`}>
             {[1, 2, 3, 4, 5, 6, 0].map((index) => {
                 const data = bgData[index];
                 return (

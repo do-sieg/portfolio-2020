@@ -1,10 +1,12 @@
 import NavLink from "./NavLink";
 import { DEV_FULLNAME } from "../config/constants";
-import { getCleanPath, getLangLink, useLang, useLangLink } from "../utils/Lang";
+import { getCleanPath, getLangLink, LangContext, useLang, useLangLink } from "../utils/Lang";
 import { useRouter } from "next/router";
+import { useContext } from "react";
 
-const Header = ({ pageLang }) => {
+const Header = () => {
     const { pathname } = useRouter();
+    const pageLang = useContext(LangContext);
     const lang = useLang(pageLang);
     const langLink = useLangLink(pageLang);
 

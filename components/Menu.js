@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faHome } from '@fortawesome/free-solid-svg-icons';
 import NavLink from './NavLink';
-import { useLang, useLangLink } from '../utils/Lang';
+import { LangContext, useLang, useLangLink } from '../utils/Lang';
+import { useContext } from 'react';
 
 export const MENU_ROTATION_ACTIVE = false;
 export const MENU_ROTATION_DURATION = 0.8;
@@ -21,7 +22,8 @@ export function closeMenu() {
     }
 }
 
-const Menu = ({ isOpening, pageLang }) => {
+const Menu = ({ isOpening }) => {
+    const pageLang = useContext(LangContext);
     const lang = useLang(pageLang);
     const langLink = useLangLink(pageLang);
 

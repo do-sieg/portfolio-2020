@@ -1,6 +1,6 @@
 import Modal from 'react-modal';
-import { useState } from 'react';
-import { useLang } from '../utils/Lang';
+import { useContext, useState } from 'react';
+import { LangContext, useLang } from '../utils/Lang';
 
 Modal.setAppElement('#__next');
 
@@ -20,8 +20,10 @@ const modalStyles = {
 };
 
 
-const FeedbackModal = ({ children, pageLang }) => {
+const FeedbackModal = ({ children }) => {
     const [showModal, setShowModal] = useState(false);
+    
+    const pageLang = useContext(LangContext);
     const lang = useLang(pageLang);
 
     function openModal() {

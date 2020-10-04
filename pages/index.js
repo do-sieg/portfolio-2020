@@ -7,7 +7,8 @@ import featuredData from '../public/data/featured.json';
 import NavLink from "../components/NavLink";
 import { U_LINKEDIN, U_CV, DEV_FULLNAME, U_CV_FR, U_CV_EN } from "../config/constants";
 import localIcons from "../assets/icons";
-import { useLang, useLangLink } from "../utils/Lang";
+import { LangContext, useLang, useLangLink } from "../utils/Lang";
+import { useContext } from "react";
 
 function loadData(collectionName) {
   try {
@@ -38,7 +39,8 @@ function selectFeatured(type) {
 }
 
 
-export default function Home({ pageLang = "fr" }) {
+export default function Home() {
+  const pageLang = useContext(LangContext);
   const lang = useLang(pageLang);
   const langLink = useLangLink(pageLang);
 
@@ -58,7 +60,7 @@ export default function Home({ pageLang = "fr" }) {
   }[pageLang]
 
   return (
-    <Layout className="home-page" headTitle={`${DEV_FULLNAME} - ${lang('NAV_HOME')}`} pageLang={pageLang}>
+    <Layout className="home-page" headTitle={`${DEV_FULLNAME} - ${lang('NAV_HOME')}`}>
 
       {lang("HOME_WELCOME_TEXT")}
 
@@ -101,7 +103,7 @@ export default function Home({ pageLang = "fr" }) {
         <p className="news-desc">
           {lang('NEWS_DESC')}
         </p>
-        <ProjectGallery list={selectFeatured('home')} pageLang={pageLang} />
+        <ProjectGallery list={selectFeatured('home')} />
 
         <NavLink className="btn btn-blue see-more-btn" href={langLink("/projects")}>{lang('ACTION_SEE_ALL_PROJECTS')}</NavLink>
 

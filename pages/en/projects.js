@@ -1,7 +1,10 @@
+import { LangContext } from "../../utils/Lang";
 import Projects from "../projects";
 
 export default function Page() {
     return (
-        <Projects pageLang="en" />
+        <LangContext.Provider value="en">
+            <Projects />
+        </LangContext.Provider>
     )
 }

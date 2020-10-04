@@ -1,4 +1,11 @@
+import React from 'react';
+
 const langs = ["fr", "en"];
+
+export const LangContext = React.createContext({
+    fr: 'fr',
+    en: 'en',
+});
 
 export function useLang(lang) {
     return (field) => getLangText(lang, field);

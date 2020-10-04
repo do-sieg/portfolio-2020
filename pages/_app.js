@@ -3,7 +3,7 @@ import '../public/styles/stylesheets/components.css';
 import '../public/styles/stylesheets/pages.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { getLangFromPath } from '../utils/Lang';
+import { getLangFromPath, LangContext } from '../utils/Lang';
 
 function CustomApp({ Component, pageProps }) {
   const { pathname } = useRouter();
@@ -12,7 +12,11 @@ function CustomApp({ Component, pageProps }) {
     document.documentElement.lang = pageLang;
   }, [pageLang]);
 
-  return <Component {...pageProps} />
+  return (
+    <LangContext.Provider value="fr">
+      <Component {...pageProps} />
+    </LangContext.Provider>
+  );
 }
 
 export default CustomApp;

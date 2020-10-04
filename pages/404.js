@@ -1,9 +1,11 @@
 import SimpleLayout from "../components/SimpleLayout";
 import Footer from "../components/Footer";
 import Link from "next/link";
-import { useLang } from "../utils/Lang";
+import { LangContext, useLang } from "../utils/Lang";
+import { useContext } from "react";
 
-const Error404 = ({ pageLang = "fr" }) => {
+const Error404 = () => {
+    const pageLang = useContext(LangContext);
     const lang = useLang(pageLang);
 
     return (
@@ -16,7 +18,7 @@ const Error404 = ({ pageLang = "fr" }) => {
                 <Link href="/">
                     <a>{lang('ACTION_BACK_TO_HOMEPAGE')}</a>
                 </Link>
-                <Footer pageLang={pageLang} />
+                <Footer />
             </div>
         </SimpleLayout>
     );

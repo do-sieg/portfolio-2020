@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import { DEV_FULLNAME, U_EMAIL, DEV_EMAIL } from "../config/constants";
-import { useLang, useLangLink } from "../utils/Lang";
+import { LangContext, useLang, useLangLink } from "../utils/Lang";
 import NavLink from "./NavLink";
 
-const Footer = ({ pageLang }) => {
+const Footer = () => {
+    const pageLang = useContext(LangContext);
     const lang = useLang(pageLang);
     const langLink = useLangLink(pageLang);
 

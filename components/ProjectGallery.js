@@ -1,9 +1,10 @@
 import FeedbackModal from './FeedbackModal';
-import { useState } from 'react';
-import { useLang } from '../utils/Lang';
+import { useContext, useState } from 'react';
+import { LangContext, useLang } from '../utils/Lang';
 
-export function ProjectGallery({ category, list, pageLang = "fr" }) {
+export function ProjectGallery({ category, list }) {
     const [hoverIndex, setHoverIndex] = useState();
+    const pageLang = useContext(LangContext);
     const lang = useLang(pageLang);
 
     function renderProjectLink(data) {
@@ -32,7 +33,7 @@ export function ProjectGallery({ category, list, pageLang = "fr" }) {
 
         return (
             data['url_visit_fake'] ?
-                <FeedbackModal pageLang={pageLang}><button className="btn btn-blue">{text}</button></FeedbackModal>
+                <FeedbackModal><button className="btn btn-blue">{text}</button></FeedbackModal>
                 :
                 href ? <a className="btn btn-green" href={href} target="_blank">{text}</a> : ""
         );
