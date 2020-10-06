@@ -1,10 +1,42 @@
 [
-    { "author": "James Donaldson (Unsplash)", "path": "/images/backgrounds/james-donaldson.jpg" },
-    { "author": "Matthew Henry (Unsplash)", "path": "/images/backgrounds/matthew-henry.jpg" },
-    { "author": "Kace Rodriguez (Unsplash)", "path": "/images/backgrounds/kace-rodriguez.jpg" },
-    { "author": "Ronit Shaked (Unsplash)", "path": "/images/backgrounds/ronit-shaked.jpg" },
-    { "author": "Juliana Chyzhova (Unsplash)", "path": "/images/backgrounds/juliana-chyzhova.jpg" },
-    { "author": "Samsommer (Unsplash)", "path": "/images/backgrounds/samsommer.jpg" },
-    { "author": "Pascal M. (Unsplash)", "path": "/images/backgrounds/pascal-m.jpg" },
-    { "author": "Nattu Adnan (Unsplash)", "path": "/images/backgrounds/nattu-adnan.jpg" }
+    {
+        "author": "James Donaldson (Unsplash)",
+        "path": "/images/backgrounds/james-donaldson.jpg",
+        "thumbnail": "/images/backgrounds/james-donaldson_thumb.jpg"
+    },
+    {
+        "author": "Matthew Henry (Unsplash)",
+        "path": "/images/backgrounds/matthew-henry.jpg",
+        "thumbnail": "/images/backgrounds/matthew-henry_thumb.jpg"
+    },
+    {
+        "author": "Kace Rodriguez (Unsplash)",
+        "path": "/images/backgrounds/kace-rodriguez.jpg",
+        "thumbnail": "/images/backgrounds/kace-rodriguez_thumb.jpg"
+    },
+    {
+        "author": "Ronit Shaked (Unsplash)",
+        "path": "/images/backgrounds/ronit-shaked.jpg",
+        "thumbnail": "/images/backgrounds/ronit-shaked_thumb.jpg"
+    },
+    {
+        "author": "Juliana Chyzhova (Unsplash)",
+        "path": "/images/backgrounds/juliana-chyzhova.jpg",
+        "thumbnail": "/images/backgrounds/juliana-chyzhova_thumb.jpg"
+    },
+    {
+        "author": "Samsommer (Unsplash)",
+        "path": "/images/backgrounds/samsommer.jpg",
+        "thumbnail": "/images/backgrounds/samsommer_thumb.jpg"
+    },
+    {
+        "author": "Pascal M. (Unsplash)",
+        "path": "/images/backgrounds/pascal-m.jpg",
+        "thumbnail": "/images/backgrounds/pascal-m_thumb.jpg"
+    },
+    {
+        "author": "Nattu Adnan (Unsplash)",
+        "path": "/images/backgrounds/nattu-adnan.jpg",
+        "thumbnail": "/images/backgrounds/nattu-adnan_thumb.jpg"
+    }
 ]

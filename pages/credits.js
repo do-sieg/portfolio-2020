@@ -23,7 +23,7 @@ export default function Credits() {
                 const data = bgData[index];
                 return (
                     <div key={index} className="photo-credits-row">
-                        <img src={data.path} alt={days[index]} /><label>[{days[index]}] {data.author}</label>
+                        <img src={data.thumbnail} alt={days[index]} /><label>[{days[index]}] {data.author}</label>
                     </div>
                 );
             })}

@@ -18,6 +18,7 @@ a {
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 @font-face {
@@ -60,12 +61,38 @@ main {
 .page-container {
   flex: 1;
 }
+
 .page-wrapper {
   max-width: 50rem;
   margin: 0 auto;
 }
 
+.simple-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background-color: @error-page-bg;
+  background-image: linear-gradient(to right, @error-page-bg, lighten(@error-page-bg, 10%));
+  color: @c-grey;
 
+  a {
+    color: lighten(@c-green, 20%);
+  }
+
+  .inner-flex-container {
+    flex: 1;
+    width: 100%;
+  }
+  
+  footer {
+    a {
+        font-size: initial;
+        max-width: unset;
+    }
+  }
+}
 
 .btn {
   display: block;

@@ -5,6 +5,9 @@ import { DEV_EMAIL, U_EMAIL } from "../../../config/constants";
 // Errors
 export const ERR_PAGE_NOT_FOUND = "This page doesn't exist";
 
+// Actions
+export const ACTION_SUBMIT = "Submit";
+
 // Days
 export const DAY_SUNDAY = "Sunday";
 export const DAY_MONDAY = "Monday";
@@ -87,3 +90,7 @@ export const FEEDBACK_MODAL_TEXT_SHORT = (
         <a href={U_EMAIL}>{DEV_EMAIL}</a>
     </>
 );
+
+// Templates Page
+export const ERR_EMPTY_PASSWORD = "Password can't be empty";
+export const ERR_WRONG_PASSWORD = "You entered the wrong password";

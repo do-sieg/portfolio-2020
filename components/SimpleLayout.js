@@ -1,10 +1,16 @@
 import Head from "./Head";
+import Footer from "./Footer";
 
-const SimpleLayout = ({ children, headTitle }) => {
+const SimpleLayout = ({ children, className, headTitle }) => {
     return (
         <>
             <Head customTitle={headTitle} />
-            {children}
+            <div className="simple-page-container">
+                <div className={"inner-flex-container " + (className ? className : "")}>
+                    {children}
+                </div>
+                <Footer />
+            </div>
         </>
     );
 }

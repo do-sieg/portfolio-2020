@@ -1,17 +1,14 @@
 @import url('_variables.less');
 
 
-.error-page-container {
+.error-page {
     width: 100vw;
-    height: 100vh;
   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   
-    background-color: @error-page-bg;
-    background-image: linear-gradient(to right, @error-page-bg, lighten(@error-page-bg, 10%));
   
     .error-box {
         display: flex;
@@ -44,49 +41,38 @@
         }
         
         @media screen and (max-width: 980px) {
-    
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
-            
             h1 {
-            width: 15rem;
-            flex: unset;
-            padding: 0;
-            border-right: none;
-            border-bottom: solid 0.2rem lighten(@c-grey, 25%);
-            justify-content: center;
+                width: 15rem;
+                flex: unset;
+                padding: 0;
+                border-right: none;
+                border-bottom: solid 0.2rem lighten(@c-grey, 25%);
+                justify-content: center;
             }
             span {
-            width: 15rem;
-            flex: unset;
-            padding: 0;
-            justify-content: center;
+                width: 15rem;
+                flex: unset;
+                padding: 0;
+                justify-content: center;
             }
         }
-        }
-  
-        a {
+    }
+
+    a {
         flex: 1;
         text-align: center;
         line-height: 1.5;
         font-size: 1.25rem;
-        color: lighten(@c-green, 20%);
         
         @media screen and (max-width: 980px) {
             max-width: 80%;
             font-size: 1.1rem;
         }
-        }
-    
-        footer {
-        // color: @c-grey;
-        a {
-            font-size: initial;
-            color: lighten(@c-green, 20%);
-            max-width: unset;
-        }
     }
+    
 }
 
 .home-page {

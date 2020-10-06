@@ -1,14 +1,11 @@
-.error-page-container {
+.error-page {
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #333;
-  background-image: linear-gradient(to right, #333, #4d4d4d);
 }
-.error-page-container .error-box {
+.error-page .error-box {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -16,7 +13,7 @@
   flex: 1;
   padding-bottom: 2rem;
 }
-.error-page-container .error-box h1 {
+.error-page .error-box h1 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -28,7 +25,7 @@
   font-size: 3.5rem;
   color: #c8c8c8;
 }
-.error-page-container .error-box span {
+.error-page .error-box span {
   display: flex;
   align-items: center;
   flex: 1.1;
@@ -38,12 +35,12 @@
   color: #eeeeee;
 }
 @media screen and (max-width: 980px) {
-  .error-page-container .error-box {
+  .error-page .error-box {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
   }
-  .error-page-container .error-box h1 {
+  .error-page .error-box h1 {
     width: 15rem;
     flex: unset;
     padding: 0;
@@ -51,30 +48,24 @@
     border-bottom: solid 0.2rem #c8c8c8;
     justify-content: center;
   }
-  .error-page-container .error-box span {
+  .error-page .error-box span {
     width: 15rem;
     flex: unset;
     padding: 0;
     justify-content: center;
   }
 }
-.error-page-container a {
+.error-page a {
   flex: 1;
   text-align: center;
   line-height: 1.5;
   font-size: 1.25rem;
-  color: #aace86;
 }
 @media screen and (max-width: 980px) {
-  .error-page-container a {
+  .error-page a {
     max-width: 80%;
     font-size: 1.1rem;
   }
-}
-.error-page-container footer a {
-  font-size: initial;
-  color: #aace86;
-  max-width: unset;
 }
 .home-page .keyword {
   font-weight: bold;
