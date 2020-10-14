@@ -25,7 +25,6 @@ export default function LessonsLayout({ children, className, headTitle }) {
             <Head customTitle={headTitle} />
             <LessonsHeader />
             <LessonMenuShortcut />
-
             <div className="lesson-layout-wrapper">
                 <LessonsMenu />
                 <main className="lesson-main">
