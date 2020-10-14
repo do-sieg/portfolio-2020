@@ -1,0 +1,16 @@
+{
+    "nodejs": {
+        "name": "Les Cours NodeJS",
+        "letter": "N",
+        "plan": [
+            {
+                "title": "Débuter avec NodeJS",
+                "lessons": {
+                    "0": "1-1-creer-projet-node",
+                    "1": "1-2-dependances",
+                    "2": "1-3-environnements"
+                }
+            }
+        ]
+    }
+}

@@ -1,12 +1,18 @@
 export const DEV_FULLNAME = "Daniel Orchanian";
 export const DEV_EMAIL = "d.orchanian@gmail.com";
 
+export const LSN_HEAD_TITLE_PREFIX = "CoursJS";
+
+export const U_WEBSITE = "https://danielorchanian.fr";
 export const U_EMAIL = "mailto:d.orchanian@gmail.com";
 export const U_FACEBOOK = "https://www.facebook.com/daniel.orchanian";
 export const U_GITHUB = "https://github.com/do-sieg";
 export const U_LINKEDIN = "http://www.linkedin.com/in/daniel-orchanian";
 export const U_CV_FR = "/files/CV_Daniel_Orchanian_2020_FR.pdf";
 export const U_CV_EN = "/files/CV_Daniel_Orchanian_2020_EN.pdf";
+
+export const U_KELPROF = "https://www.kelprof.com/cours-particuliers/programmation/cours-particulier-developpement-web-professionnel-762600.html";
+export const U_VOSCOURS = "https://www.voscours.fr/online/programmation/cours-developpement-web-javascript-en-ligne-2373531";
 
 export const T_OG_DESC = `
     Développeur Web basé à Valence, je m'intéresse aux projets de toute sorte.

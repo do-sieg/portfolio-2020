@@ -8,6 +8,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    background-color: @error-page-bg;
+    background-image: linear-gradient(to right, @error-page-bg, lighten(@error-page-bg, 10%));
+    color: @c-grey;
   
   
     .error-box {
@@ -71,6 +75,10 @@
             max-width: 80%;
             font-size: 1.1rem;
         }
+    }
+
+    footer {
+        color: lighten(@c-grey, 20%);
     }
     
 }

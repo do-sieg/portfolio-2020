@@ -84,12 +84,11 @@ header {
     
     }
   
-    .profile-description {
-  
-        margin-left: calc(@profile-pic-diameter * 1.5 + 1.5rem);
-    
-        width: calc(100% - calc(@profile-pic-diameter * 1.5 + 1.5rem));
+    .title-container {
+        
+        width: calc(100% - calc(5rem));
         height: 85%;
+        margin-left: 5rem;
     
         display: flex;
         flex-direction: column;
@@ -103,27 +102,27 @@ header {
     
         // background-color: orange;
     
-        h1 {
+        h1, .title {
             height: 2.5rem;
             margin: 0 0 0.2rem;
             border-bottom: solid 0.15rem;
             font-size: 2rem;
             font-weight: 600;
         }
-        p {
+        p, .subtitle {
             margin: 0 0 0 1.5rem;
             font-size: 1.2rem;
             font-weight: 500;
             color: @ui-box-secondary-color;
         }
         @media screen and (max-width: 980px) {
-            margin-left: calc(@profile-pic-diameter-resp + 0.75rem);
-            width: calc(100% - calc(@profile-pic-diameter-resp + 0.75rem));
-            h1 {
+            margin-left: 2rem;
+            width: calc(100% - 2rem);
+            h1, .title {
                 height: 1.65rem;
                 font-size: 1.2rem;
             }
-            p {
+            p, .subtitle {
                 font-size: 1rem;
                 margin-left: 0.5rem;
                 .extended {
@@ -132,16 +131,31 @@ header {
             }
         }
         @media screen and (max-width: 300px) {
-            margin-left: calc(@profile-pic-diameter-resp-mini + 0.5rem);
-            width: calc(100% - calc(@profile-pic-diameter-resp-mini + 0.5rem));
-            h1 {
+            margin-left: 0.5rem;
+            width: calc(100% - 0.5rem);
+            h1, .title {
                 height: 1.5rem;
                 font-size: 1.1rem;
             }
-            p {
+            p, .subtitle {
                 font-size: 0.9rem;
                 margin-left: 0.5rem;
             }
+        }
+    }
+}
+
+.main-header {
+    .title-container {
+        margin-left: calc(@profile-pic-diameter * 1.5 + 1.5rem);
+        width: calc(100% - calc(@profile-pic-diameter * 1.5 + 1.5rem));
+        @media screen and (max-width: 980px) {
+            margin-left: calc(@profile-pic-diameter-resp + 0.75rem);
+            width: calc(100% - calc(@profile-pic-diameter-resp + 0.75rem));
+        }
+        @media screen and (max-width: 300px) {
+            margin-left: calc(@profile-pic-diameter-resp-mini + 0.5rem);
+            width: calc(100% - calc(@profile-pic-diameter-resp-mini + 0.5rem));
         }
     }
 }
@@ -163,6 +177,44 @@ footer {
 }
 
 
+.nav-button {
+    
+    margin: 0.5rem 0 0.5rem;
+    padding: 0.6rem 0.5rem 0.1rem 0;
+    
+    @media screen and (max-width: 980px) {
+        padding-bottom: 0.5rem;
+    }
+    @media screen and (max-width: 300px) {
+        padding-right: 0.2rem;
+    }
+
+    background-color: lighten(@menu-bg-color, 4%);
+    background-image: linear-gradient(lighten(@menu-bg-color, 4%), @menu-bg-color);
+    color: @ui-box-secondary-color;
+
+    border-right: solid 2px lighten(@menu-bg-color, 15%);
+    box-shadow: 0 0.05rem 0.05rem 0.05rem #0005;
+
+    transition: all 0.3s 0.05s;
+
+    &:hover {
+        // margin: 0.45rem 0 0.55rem;
+        padding-right: 0.55rem;
+        @media screen and (max-width: 300px) {
+            padding-right: 0.25rem;
+        }
+        background-color: lighten(@menu-bg-color, 5%);
+        background-image: linear-gradient(lighten(@menu-bg-color, 5%), @menu-bg-color);
+        color: @ui-box-primary-color;
+        border-right: solid 2px lighten(@menu-bg-color, 12%);
+        box-shadow: 0 0.1rem 0.1rem 0.1rem #0003;
+    }
+}
+
+    
+
+
 
 .side-menu-container {
     position: fixed;
@@ -171,7 +223,6 @@ footer {
   
     z-index: 2;
     
-    width: @menu-width;
     height: 100%;
   
     text-align: right;
@@ -230,13 +281,12 @@ footer {
         animation-fill-mode: forwards;
         transform: rotate(0deg);
     }
-  
+
     nav {
-        // background-color: pink;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-    
+
         margin-top: calc(6rem + @header-height + @rotating-menu-offset-y);
         @media screen and (max-width: 980px) {
             margin-top: calc(4.5rem + @header-height-resp + @rotating-menu-offset-y);
@@ -244,74 +294,54 @@ footer {
         @media screen and (max-width: 300px) {
             margin-top: calc(3.5rem + @header-height-resp + @rotating-menu-offset-y);
         }
-  
+
         a {
             display: block;
             cursor: pointer;
             user-select: none;
-    
-            margin: 0.5rem 0 0.5rem;
-            padding: 0.6rem 0.5rem 0.1rem 0;
-  
-            width: 8rem;
-            @media screen and (max-width: 980px) {
-                width: 3rem;
-                padding-bottom: 0.5rem;
-            }
-            @media screen and (max-width: 300px) {
-                width: 2.5rem;
-                padding-right: 0.2rem;
-            }
-    
-            height: 2.5rem;
+
+            width: 100%;
+
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-    
-            font-weight: 500;
-            font-size: 1.25rem;
-            font-family: @title-font;
             
-            background-color: lighten(@menu-bg-color, 4%);
-            background-image: linear-gradient(lighten(@menu-bg-color, 4%), @menu-bg-color);
-            // color: fade(@ui-box-primary-color, 90%);
-            color: @ui-box-secondary-color;
+            svg {
+                min-width: 1.5rem;
+                min-height: 1.5rem;
+            }
+            
+        }
+    }
+  
+    .main-menu {
+        a {
+            width: 8rem;
+            height: 2.5rem;
+            
+            @media screen and (max-width: 980px) {
+                width: 3rem;
+            }
+
+            @media screen and (max-width: 300px) {
+                width: 2.5rem;
+            }
     
             border-top-left-radius: 1.2rem;
             border-bottom-left-radius: 0.8rem;
             
-            border-right: solid 2px lighten(@menu-bg-color, 15%);
-            box-shadow: 0 0.05rem 0.05rem 0.05rem #0005;
-    
-            transition: all 0.3s 0.05s;
-  
-            &:hover {
+            justify-content: flex-end;
+
+            font-weight: 500;
+            font-size: 1.25rem;
+            font-family: @title-font;
             
-                margin: 0.45rem 0 0.55rem;
-                padding-right: 0.55rem;
-                @media screen and (max-width: 300px) {
-                    padding-right: 0.25rem;
-                }
-                background-color: lighten(@menu-bg-color, 5%);
-                background-image: linear-gradient(lighten(@menu-bg-color, 5%), @menu-bg-color);
-                color: @ui-box-primary-color;
-                border-right: solid 2px lighten(@menu-bg-color, 12%);
-                box-shadow: 0 0.1rem 0.1rem 0.1rem #0003;
-            }
-    
             svg {
                 display: none;
-                min-width: 1.5rem;
-                min-height: 1.5rem;
             }
-    
+            
             @media screen and (max-width: 980px) {
-                span {
-                    display: none;
-                }
-                svg {
-                    display: block;
-                }
+                span { display: none; }
+                svg { display: block; }
             }
         }
     }
@@ -334,6 +364,9 @@ footer {
         transform: rotate(-90deg);
     }
 }
+
+
+
 
 
 .contact-me-box {
@@ -393,6 +426,8 @@ footer {
         z-index: 1;
     
         svg {
+            width: 2rem;
+            height: 2rem;
             opacity: 0.5;
             transition: opacity 0.3s;
         }
@@ -728,6 +763,50 @@ footer {
             background-color: @c-darkorange;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+        }
+    }
+}
+
+.markdown {
+    
+
+    h1 {
+        border-bottom: solid 0.1rem;
+    }
+
+    h2 {
+        margin: 2.5rem 0 0.2rem;
+    }
+
+    p, li {
+        line-height: 1.5;
+    }
+
+
+    code {
+        padding: 0.2rem 0.5rem;
+        white-space: pre-wrap;
+        // font-size: 1.2rem;
+        background-color: #272822;
+    }
+
+    pre {
+
+        code {
+            padding: 0;
+            white-space: pre-wrap;
+            font-size: unset;
+            background-color: transparent;
+        }
+    }
+
+    blockquote {
+        margin: 0;
+        padding: 0.2rem 0.5rem;
+        border-left: solid 0.5rem @c-grey;
+        background-color: fade(@c-grey, 10%);
+        p {
+            margin: 0.2rem 0;
         }
     }
 }

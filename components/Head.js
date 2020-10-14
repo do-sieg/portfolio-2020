@@ -15,6 +15,7 @@ const Head = ({ customTitle = DEV_FULLNAME }) => {
             <meta property="og:description" content={T_OG_DESC} />
             <meta property="og:image" content="https://danielorchanian.fr/favicon.png" />
             <meta name="google-site-verification" content="nA_w5Nq5KWlhRel_fhMcUW8ZhvYOXWyDfZFxeDrWFjM" />
+            {/* <link rel="stylesheet" href="/libs/prism.css" /> */}
             {/* <link href="/styles/globals.css" rel="stylesheet"></link> */}
             {/* <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;500;600;700&display=swap" rel="stylesheet" /> */}
             {/* <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet" /> */}

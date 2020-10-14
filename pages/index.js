@@ -7,7 +7,7 @@ import featuredData from '../public/data/featured.json';
 import NavLink from "../components/NavLink";
 import { U_LINKEDIN, U_CV, DEV_FULLNAME, U_CV_FR, U_CV_EN } from "../config/constants";
 import localIcons from "../assets/icons";
-import { LangContext, useLang, useLangLink } from "../utils/Lang";
+import { LangContext, useLang, useLangLink } from "../utils/lang";
 import { useContext } from "react";
 
 function loadData(collectionName) {

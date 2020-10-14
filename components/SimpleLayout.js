@@ -9,7 +9,6 @@ const SimpleLayout = ({ children, className, headTitle }) => {
                 <div className={"inner-flex-container " + (className ? className : "")}>
                     {children}
                 </div>
-                <Footer />
             </div>
         </>
     );

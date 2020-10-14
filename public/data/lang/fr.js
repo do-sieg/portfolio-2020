@@ -27,6 +27,8 @@ export const PHOTO_CREDITS = "Crédits photo";
 // Menu
 export const NAV_HOME = "Accueil";
 export const NAV_PROJECTS = "Projets";
+export const NAV_BLOG = "Blog";
+export const NAV_LESSONS = "Cours";
 export const NAV_CREDITS = "Crédits";
 
 // Home Page
@@ -34,7 +36,7 @@ export const HOME_WELCOME_TEXT = (
     <>
         <p><span className="keyword">Bienvenue</span> sur mon site de présentation.</p>
         <p>
-            Je m'intéresse aux projets de toute sorte. Que vous soyiez une <span className="keyword">entreprise</span> ou un <span className="keyword">particulier</span>,
+            Je m'intéresse aux projets de toute sorte. <span className="keyword">Entreprise</span> ou <span className="keyword">particulier</span>,
             je mets mon expertise et mes compétences <span className="keyword">à votre service</span>.
         </p>
         <p>

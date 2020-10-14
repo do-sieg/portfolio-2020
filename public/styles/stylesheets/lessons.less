@@ -1,0 +1,317 @@
+@import url('_variables.less');
+
+// @lsn-page-bg: #221;
+// @lsn-text-primary: @c-white;
+// @lsn-text-secondary: #dba;
+@lsn-page-bg: #eee;
+@lsn-text-primary: @c-black;
+@lsn-text-secondary: #976;
+// @lsn-link: #fa8;
+@lsn-link: #d54;
+@lsn-link-hover: lighten(@lsn-link, 10%);
+
+@lsn-header-bg: #654;
+@lsn-menu-bg: #765;
+
+
+.lesson-layout-wrapper {
+    display: flex;
+    @media screen and (max-width: 980px) {
+        flex-direction: column-reverse;
+    }
+    
+    footer {
+        color: @c-darkgrey;
+
+        a {
+            display: unset;
+            font-size: unset;
+            font-weight: bold;
+            color: @c-darkgrey;
+            &:hover {
+                color: lighten(@c-darkgrey, 10%);
+            }
+        }
+    }
+}
+
+
+.lesson-header {
+    background-color: @lsn-header-bg;
+    background-image: linear-gradient(@lsn-header-bg, lighten(@lsn-header-bg, 10%));
+
+    a {
+        width: 100%;
+    }
+    
+    .title {
+        cursor: pointer;
+    }
+    
+    .subtitle {
+        color: lighten(@lsn-text-secondary, 40%) !important;
+    }
+}
+
+
+.lesson-main {
+    flex: 1;
+    margin-left: 0;
+
+    background-color: @lsn-page-bg;
+    background-image: linear-gradient(@lsn-page-bg, darken(@lsn-page-bg, 5%));;
+}
+
+
+.lesson-nav {
+    width: 15rem;
+    margin-top: @header-height;
+    @media screen and (max-width: 980px) {
+        // Responsive version, below the page
+        width: 100%;
+        margin-top: 0;
+    }
+    padding: 0rem 0.5rem 1rem;
+    text-align: left;
+
+    font-size: large;
+    color: @c-white;
+
+    background-color: @lsn-menu-bg;
+    background-image: linear-gradient(@lsn-menu-bg, lighten(@lsn-menu-bg, 10%));
+
+    .lesson-nav-header {
+        display: flex;
+
+        margin : 1.5rem 0 0.2rem;
+        padding-bottom: 0.2rem;
+        border-bottom: solid 0.1rem @c-white;
+        color: @c-white;
+
+        span {
+            display: inline-block;
+            margin-left: 0.25rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    .nav-button {
+        color: @c-white;
+        background-color: lighten(@lsn-menu-bg, 4%);
+        background-image: linear-gradient(lighten(@lsn-menu-bg, 4%), @lsn-menu-bg);
+        border-color: lighten(@lsn-menu-bg, 15%);
+        &:hover {
+            color: lighten(@lsn-link-hover, 20%);
+        }
+    }
+
+    a {
+        display: flex;
+        padding: 0.2rem !important;
+        text-align: left;
+        line-height: 1.5rem;
+
+        border-top-left-radius: 0.2rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+
+        .numtag {
+            label {
+                cursor: pointer;
+            }
+        }
+
+        span {
+            margin-left: 0.25rem;
+        }
+    }
+}
+
+
+.lesson-menu-shortcut {
+    display: none;
+    position: absolute;
+    top: calc(@header-height + 1rem);
+    left: 0.5rem;
+    
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: unset;
+    padding: 0.5rem;
+
+    border-radius: 0.2rem;
+    box-shadow: 0 0.1rem 0.1rem 0.1rem #0005;
+
+    @media screen and (max-width: 980px) {
+        display: block;
+        top: @header-height-resp + 0.5rem;
+    }
+
+    svg {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+    }
+}
+
+
+.lesson-author {
+    padding: 2rem 0;
+    border-top: solid 0.1rem @c-grey;
+
+    &.no-border { border-color: transparent; }
+
+    .top-block {
+        display: flex;
+        @media screen and (max-width: 980px) {
+            flex-direction: column;
+        }
+        
+        .profile-picture {
+            min-width: 10rem;
+            min-height: 10rem;
+            width: 10rem;
+            height: 10rem;
+            margin-top: 2rem;
+            @media screen and (max-width: 980px) {
+                width: 80%;
+                height: 80%;
+                margin: 0 auto;
+            }
+        
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+    
+        .author-bio-block {
+            margin-left: 2rem;
+            @media screen and (max-width: 980px) {
+                margin-left: 0;
+            }
+    
+            h2 {
+                width: fit-content;
+                margin: 1rem 0;
+                border-bottom: solid 0.1rem @lsn-text-secondary;
+                font-family: @title-font;
+            }
+        }
+    }
+
+    .author-contact-block {
+        .teach-link {
+            display: block;
+            margin: 0.5rem 1.5rem;
+        }
+    }
+}
+
+
+.lesson-page {
+    
+    font-size: large;
+
+    color: @lsn-text-primary;
+
+    a {
+        color: @lsn-link;
+        &:hover { color: @lsn-link-hover; }
+        transition: all 0 0.3s;
+    }
+
+    h1, h2, h3 {
+        color: @lsn-text-secondary;
+    }
+
+    h1 {
+        border-bottom: solid 0.1rem;
+    }
+    
+    h2 {
+        margin: 2.5rem 0 0.2rem;
+    }
+
+    strong, .keyword {
+        color: @lsn-text-secondary;
+        font-weight: bold;
+    }
+
+    p, li {
+        line-height: 1.5;
+    }
+
+    code {
+        color: @c-white;
+    }
+
+    .disclaimer {
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        background-color: @c-darkred;
+        color: @c-white;
+    }
+
+    .lesson-published-date {
+        font-style: italic;
+    }
+
+}
+
+
+
+
+
+/// CleAN
+/* -------------------------------------------- */
+
+
+.numtag  {
+    position: relative;
+    
+    display: inline-block;
+    border-top: 1.5rem solid fade(@c-purple, 80%);
+    border-left: 1.5rem solid fade(@c-purple, 80%);
+    border-right: 0.5rem solid transparent;
+    height: 0;
+    width: 0;
+
+    &.section {
+        border-top-color: @c-blue;
+        border-left-color: @c-blue;
+    }
+
+    &.lesson {
+        &.code {
+            border-top-color: darken(@c-yellow, 10%);
+            border-left-color: darken(@c-yellow, 10%);
+        }
+        &.theory {
+            border-top-color: @c-green;
+            border-left-color: @c-green;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: -1.5rem;
+        left: -1.5rem;
+
+
+        display: block;
+        width: 1.5rem;
+        padding: 0.2rem;
+        // font-weight: bold;
+
+        // background-color: orange;
+
+        color: @c-white;
+
+        text-align: center;
+        line-height: 1.2rem;
+
+    }
+}
+

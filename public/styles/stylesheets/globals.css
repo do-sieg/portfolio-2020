@@ -31,7 +31,7 @@ main {
   min-height: calc(100vh - 5.5rem);
   margin: 5.5rem 0 0 10rem;
   padding: 2rem 5rem 0;
-  background: linear-gradient(#fffa, #fff6);
+  background-image: linear-gradient(#fffa, #fff6);
 }
 @media screen and (max-width: 980px) {
   main {
@@ -58,9 +58,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #333;
-  background-image: linear-gradient(to right, #333, #4d4d4d);
-  color: #888;
 }
 .simple-page-container a {
   color: #aace86;

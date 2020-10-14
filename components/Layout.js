@@ -5,6 +5,7 @@ import Menu, { MENU_ROTATION_ACTIVE } from './Menu';
 import Footer from './Footer';
 import ContactMeBox from './ContactMeBox';
 import { useEffect } from 'react';
+import LangSelector from './LangSelector';
 
 const Layout = ({ children, className, headTitle }) => {
     let isMenuOpening = MENU_ROTATION_ACTIVE;
@@ -23,6 +24,7 @@ const Layout = ({ children, className, headTitle }) => {
         <>
             <Head customTitle={headTitle} />
             <Header />
+            <LangSelector />
             <Menu isOpening={isMenuOpening} />
             <ContactMeBox />
             <DailyBackground />

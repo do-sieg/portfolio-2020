@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { getLangFromPath } from '../utils/Lang';
+import { getLangFromPath } from '../utils/lang';
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {

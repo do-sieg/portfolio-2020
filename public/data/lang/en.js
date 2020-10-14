@@ -27,6 +27,8 @@ export const PHOTO_CREDITS = "Photo credits";
 // Menu
 export const NAV_HOME = "Home";
 export const NAV_PROJECTS = "Projects";
+export const NAV_BLOG = "Blog";
+export const NAV_LESSONS = "Lessons";
 export const NAV_CREDITS = "Credits";
 
 // Home Page
@@ -34,7 +36,7 @@ export const HOME_WELCOME_TEXT = (
     <>
         <p><span className="keyword">Welcome</span> to my presentation site.</p>
         <p>
-            I am interested in projects of all kinds. Whether you are a <span className="keyword">business</span> or an <span className="keyword">individual</span>,
+            I am interested in projects of all kinds. <span className="keyword">Business</span> or <span className="keyword">individual</span>,
             I put my expertise and my <span className="keyword">skills at your service</span>.
         </p>
         <p>

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Layout from "../components/Layout";
 import { DEV_FULLNAME } from "../config/constants";
 import bgData from '../public/data/backgrounds.json';
-import { LangContext, useLang } from "../utils/Lang";
+import { LangContext, useLang } from "../utils/lang";
 
 export default function Credits() {
     const pageLang = useContext(LangContext);

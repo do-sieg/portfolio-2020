@@ -1,6 +1,6 @@
 import FeedbackModal from './FeedbackModal';
 import { useContext, useState } from 'react';
-import { LangContext, useLang } from '../utils/Lang';
+import { LangContext, useLang } from '../utils/lang';
 
 export function ProjectGallery({ category, list }) {
     const [hoverIndex, setHoverIndex] = useState();

@@ -1,10 +1,10 @@
 import { LangContext } from "../../utils/lang";
-import Home from "../index";
+import Blog from "../blog";
 
 export default function Page() {
     return (
         <LangContext.Provider value="en">
-            <Home />
+            <Blog />
         </LangContext.Provider>
     )
 }

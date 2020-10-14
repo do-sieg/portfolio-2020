@@ -2,6 +2,11 @@ import React from 'react';
 
 const langs = ["fr", "en"];
 
+export const langDateFormats = {
+    fr: 'D/M/YY',
+    en: 'YY-M-D',
+}
+
 export const LangContext = React.createContext({
     fr: 'fr',
     en: 'en',

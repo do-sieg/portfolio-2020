@@ -63,58 +63,81 @@ header .profile-picture img {
     height: calc(6rem - 0.7rem);
   }
 }
-header .profile-description {
-  margin-left: calc(10rem * 1.5 + 1.5rem);
-  width: calc(100% - calc(10rem * 1.5 + 1.5rem));
+header .title-container {
+  width: calc(100% - calc(5rem));
   height: 85%;
+  margin-left: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   color: white;
   font-family: Kufam;
 }
-header .profile-description h1 {
+header .title-container h1,
+header .title-container .title {
   height: 2.5rem;
   margin: 0 0 0.2rem;
   border-bottom: solid 0.15rem;
   font-size: 2rem;
   font-weight: 600;
 }
-header .profile-description p {
+header .title-container p,
+header .title-container .subtitle {
   margin: 0 0 0 1.5rem;
   font-size: 1.2rem;
   font-weight: 500;
   color: #cef;
 }
 @media screen and (max-width: 980px) {
-  header .profile-description {
-    margin-left: calc(6.75rem + 0.75rem);
-    width: calc(100% - calc(6.75rem + 0.75rem));
+  header .title-container {
+    margin-left: 2rem;
+    width: calc(100% - 2rem);
   }
-  header .profile-description h1 {
+  header .title-container h1,
+  header .title-container .title {
     height: 1.65rem;
     font-size: 1.2rem;
   }
-  header .profile-description p {
+  header .title-container p,
+  header .title-container .subtitle {
     font-size: 1rem;
     margin-left: 0.5rem;
   }
-  header .profile-description p .extended {
+  header .title-container p .extended,
+  header .title-container .subtitle .extended {
     display: none;
   }
 }
 @media screen and (max-width: 300px) {
-  header .profile-description {
-    margin-left: calc(6rem + 0.5rem);
-    width: calc(100% - calc(6rem + 0.5rem));
+  header .title-container {
+    margin-left: 0.5rem;
+    width: calc(100% - 0.5rem);
   }
-  header .profile-description h1 {
+  header .title-container h1,
+  header .title-container .title {
     height: 1.5rem;
     font-size: 1.1rem;
   }
-  header .profile-description p {
+  header .title-container p,
+  header .title-container .subtitle {
     font-size: 0.9rem;
     margin-left: 0.5rem;
+  }
+}
+.main-header .title-container {
+  margin-left: calc(10rem * 1.5 + 1.5rem);
+  width: calc(100% - calc(10rem * 1.5 + 1.5rem));
+}
+@media screen and (max-width: 980px) {
+  .main-header .title-container {
+    margin-left: calc(6.75rem + 0.75rem);
+    width: calc(100% - calc(6.75rem + 0.75rem));
+  }
+}
+@media screen and (max-width: 300px) {
+  .main-header .title-container {
+    margin-left: calc(6rem + 0.5rem);
+    width: calc(100% - calc(6rem + 0.5rem));
   }
 }
 footer {
@@ -131,12 +154,44 @@ footer a {
   font-size: 0.85rem;
   font-weight: 500;
 }
+.nav-button {
+  margin: 0.5rem 0 0.5rem;
+  padding: 0.6rem 0.5rem 0.1rem 0;
+  background-color: #5d7083;
+  background-image: linear-gradient(#5d7083, #567);
+  color: #cef;
+  border-right: solid 2px #798c9f;
+  box-shadow: 0 0.05rem 0.05rem 0.05rem #0005;
+  transition: all 0.3s 0.05s;
+}
+@media screen and (max-width: 980px) {
+  .nav-button {
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .nav-button {
+    padding-right: 0.2rem;
+  }
+}
+.nav-button:hover {
+  padding-right: 0.55rem;
+  background-color: #607386;
+  background-image: linear-gradient(#607386, #567);
+  color: white;
+  border-right: solid 2px #708599;
+  box-shadow: 0 0.1rem 0.1rem 0.1rem #0003;
+}
+@media screen and (max-width: 300px) {
+  .nav-button:hover {
+    padding-right: 0.25rem;
+  }
+}
 .side-menu-container {
   position: fixed;
   top: 5.5rem;
   left: 0;
   z-index: 2;
-  width: 10rem;
   height: 100%;
   text-align: right;
   background-color: #567;
@@ -208,61 +263,42 @@ footer a {
   display: block;
   cursor: pointer;
   user-select: none;
-  margin: 0.5rem 0 0.5rem;
-  padding: 0.6rem 0.5rem 0.1rem 0;
-  width: 8rem;
-  height: 2.5rem;
+  width: 100%;
   display: flex;
   align-items: center;
+}
+.side-menu-container nav a svg {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+.side-menu-container .main-menu a {
+  width: 8rem;
+  height: 2.5rem;
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 0.8rem;
   justify-content: flex-end;
   font-weight: 500;
   font-size: 1.25rem;
   font-family: Kufam;
-  background-color: #5d7083;
-  background-image: linear-gradient(#5d7083, #567);
-  color: #cef;
-  border-top-left-radius: 1.2rem;
-  border-bottom-left-radius: 0.8rem;
-  border-right: solid 2px #798c9f;
-  box-shadow: 0 0.05rem 0.05rem 0.05rem #0005;
-  transition: all 0.3s 0.05s;
 }
 @media screen and (max-width: 980px) {
-  .side-menu-container nav a {
+  .side-menu-container .main-menu a {
     width: 3rem;
-    padding-bottom: 0.5rem;
   }
 }
 @media screen and (max-width: 300px) {
-  .side-menu-container nav a {
+  .side-menu-container .main-menu a {
     width: 2.5rem;
-    padding-right: 0.2rem;
   }
 }
-.side-menu-container nav a:hover {
-  margin: 0.45rem 0 0.55rem;
-  padding-right: 0.55rem;
-  background-color: #607386;
-  background-image: linear-gradient(#607386, #567);
-  color: white;
-  border-right: solid 2px #708599;
-  box-shadow: 0 0.1rem 0.1rem 0.1rem #0003;
-}
-@media screen and (max-width: 300px) {
-  .side-menu-container nav a:hover {
-    padding-right: 0.25rem;
-  }
-}
-.side-menu-container nav a svg {
+.side-menu-container .main-menu a svg {
   display: none;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
 }
 @media screen and (max-width: 980px) {
-  .side-menu-container nav a span {
+  .side-menu-container .main-menu a span {
     display: none;
   }
-  .side-menu-container nav a svg {
+  .side-menu-container .main-menu a svg {
     display: block;
   }
 }
@@ -332,6 +368,8 @@ footer a {
   }
 }
 .contact-me-box .trigger-btn svg {
+  width: 2rem;
+  height: 2rem;
   opacity: 0.5;
   transition: opacity 0.3s;
 }
@@ -625,4 +663,34 @@ footer a {
   background-color: #a74;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.markdown h1 {
+  border-bottom: solid 0.1rem;
+}
+.markdown h2 {
+  margin: 2.5rem 0 0.2rem;
+}
+.markdown p,
+.markdown li {
+  line-height: 1.5;
+}
+.markdown code {
+  padding: 0.2rem 0.5rem;
+  white-space: pre-wrap;
+  background-color: #272822;
+}
+.markdown pre code {
+  padding: 0;
+  white-space: pre-wrap;
+  font-size: unset;
+  background-color: transparent;
+}
+.markdown blockquote {
+  margin: 0;
+  padding: 0.2rem 0.5rem;
+  border-left: solid 0.5rem #888;
+  background-color: rgba(136, 136, 136, 0.1);
+}
+.markdown blockquote p {
+  margin: 0.2rem 0;
 }

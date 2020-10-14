@@ -1,6 +1,6 @@
 import Modal from 'react-modal';
 import { useContext, useState } from 'react';
-import { LangContext, useLang } from '../utils/Lang';
+import { LangContext, useLang } from '../utils/lang';
 
 Modal.setAppElement('#__next');
 

@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import projects_data from '../public/data/projects.json';
 import { ProjectGallery } from "../components/ProjectGallery";
 import { DEV_FULLNAME } from "../config/constants";
-import { LangContext, useLang } from "../utils/Lang";
+import { LangContext, useLang } from "../utils/lang";
 import { useContext } from "react";
 
 export default function Projects() {

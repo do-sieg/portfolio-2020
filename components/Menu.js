@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faBlog, faBriefcase, faCogs, faGraduationCap, faHome, faRocket } from '@fortawesome/free-solid-svg-icons';
 import NavLink from './NavLink';
-import { LangContext, useLang, useLangLink } from '../utils/Lang';
+import { LangContext, useLang, useLangLink } from '../utils/lang';
 import { useContext } from 'react';
+import { LSN_HEAD_TITLE_PREFIX } from '../config/constants';
 
 export const MENU_ROTATION_ACTIVE = false;
 export const MENU_ROTATION_DURATION = 0.8;
@@ -37,9 +38,11 @@ const Menu = ({ isOpening }) => {
                     animationDelay: `${MENU_ROTATION_DELAY}s`,
                 }}
             >
-                <nav>
-                    <NavLink href={langLink("/")}><span>{lang('NAV_HOME')}</span><FontAwesomeIcon icon={faHome} /></NavLink>
-                    <NavLink href={langLink("/projects")}><span>{lang('NAV_PROJECTS')}</span><FontAwesomeIcon icon={faBriefcase} /></NavLink>
+                <nav className="main-menu">
+                    <NavLink className="nav-button" href={langLink("/")}><span>{lang('NAV_HOME')}</span><FontAwesomeIcon icon={faHome} /></NavLink>
+                    <NavLink className="nav-button" href={langLink("/projects")}><span>{lang('NAV_PROJECTS')}</span><FontAwesomeIcon icon={faRocket} /></NavLink>
+                    <NavLink className="nav-button" href={"/lessons"}><span>{LSN_HEAD_TITLE_PREFIX}</span><FontAwesomeIcon icon={faGraduationCap} /></NavLink>
+                    {/* <NavLink href={langLink("/blog")}><span>{lang('NAV_BLOG')}</span><FontAwesomeIcon icon={faGraduationCap} /></NavLink> */}
                 </nav>
             </div>
         </div>

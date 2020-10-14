@@ -1,4 +1,4 @@
-import { LangContext } from "../../utils/Lang";
+import { LangContext } from "../../utils/lang";
 import Projects from "../projects";
 
 export default function Page() {
