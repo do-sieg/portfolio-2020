@@ -2,7 +2,6 @@ import Head from "./Head";
 import LessonsMenu from "./LessonsMenu";
 import Footer from "./Footer";
 import LessonMenuShortcut from "./LessonMenuShortcut";
-// import DailyBackground from "./DailyBackground";
 import NavLink from "./NavLink";
 import { LSN_HEAD_TITLE_PREFIX } from "../config/constants";
 
@@ -26,7 +25,6 @@ export default function LessonsLayout({ children, className, headTitle }) {
             <Head customTitle={headTitle} />
             <LessonsHeader />
             <LessonMenuShortcut />
-            {/* <DailyBackground /> */}
 
             <div className="lesson-layout-wrapper">
                 <LessonsMenu />
