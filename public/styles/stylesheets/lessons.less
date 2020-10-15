@@ -66,12 +66,14 @@
 .lesson-nav {
     width: 15rem;
     margin-top: @header-height;
+    min-height: calc(100% - @header-height);
     @media screen and (max-width: 980px) {
         // Responsive version, below the page
         width: 100%;
         margin-top: 0;
+        min-height: calc(100vh - @header-height-resp);
     }
-    padding: 0rem 0.5rem 1rem;
+    padding: 0.2rem 0.5rem 1rem;
     text-align: left;
 
     font-size: large;

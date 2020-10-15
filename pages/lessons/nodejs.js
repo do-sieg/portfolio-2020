@@ -1,5 +1,5 @@
 import LessonsLayout from "../../components/LessonsLayout";
-import { LSN_HEAD_TITLE_PREFIX } from "../../config/constants";
+import { LSN_TITLE } from "../../config/constants";
 import { getAllLessons, LessonsContext, renderLessonPlan } from "../../utils/lessons";
 
 const LESSON_CATEGORY = 'nodejs';
@@ -11,7 +11,7 @@ export async function getStaticProps() {
 export default function NodeLessons({ lessons }) {
     return (
         <LessonsContext.Provider value={{ lessonCategory: LESSON_CATEGORY, lessons }}>
-            <LessonsLayout className="lesson-page" headTitle={`${LSN_HEAD_TITLE_PREFIX} - NodeJS`}>
+            <LessonsLayout className="lesson-page" headTitle={`${LSN_TITLE} - Les Cours NodeJS`}>
 
                 <h1>Les Cours pour NodeJS</h1>
 

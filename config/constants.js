@@ -1,7 +1,8 @@
 export const DEV_FULLNAME = "Daniel Orchanian";
 export const DEV_EMAIL = "d.orchanian@gmail.com";
 
-export const LSN_HEAD_TITLE_PREFIX = "CoursJS";
+export const LSN_TITLE = "CoursJS";
+export const LSN_SUBTITLE = "Apprendre à coder en Javascript";
 
 export const U_WEBSITE = "https://danielorchanian.fr";
 export const U_EMAIL = "mailto:d.orchanian@gmail.com";

@@ -6,7 +6,7 @@ import { useContext, useEffect } from "react";
 import { LangContext, langDateFormats } from "../utils/lang";
 import { dateToString } from "../utils/date";
 import { LessonAuthor } from "./LessonAuthor";
-import { LSN_HEAD_TITLE_PREFIX } from "../config/constants";
+import { LSN_TITLE } from "../config/constants";
 
 export default function LessonPage({ lessonCategory, lessons, lessonData }) {
     const pageLang = useContext(LangContext);
@@ -20,7 +20,7 @@ export default function LessonPage({ lessonCategory, lessons, lessonData }) {
             <Error404 backHref="/lessons" />
             :
             <LessonsContext.Provider value={{ lessonCategory, lessons }}>
-                <LessonsLayout className="lesson-page" headTitle={`${LSN_HEAD_TITLE_PREFIX} - ${lessonData.data.title}`}>
+                <LessonsLayout className="lesson-page" headTitle={`${LSN_TITLE} - ${lessonData.data.title}`}>
                     <p className="lesson-published-date">Publié le {dateToString(lessonData.data.date, langDateFormats[pageLang])}</p>
                     <span className="markdown" dangerouslySetInnerHTML={{ __html: lessonData.htmlContent }} />
                     <LessonAuthor />
