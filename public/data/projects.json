@@ -1,5 +1,17 @@
 
 {
+    "coursjs": {
+        "type": "personal",
+        "name": "CoursJS",
+        "desc": {
+            "fr": "Des cours de développement pour débutants. Régulièrement mis à jour.",
+            "en": "Web development lessons for beginners. Regularly updated."
+        },
+        "image": "/images/projects/coursjs.jpg",
+        "image_hover": "/images/projects/coursjs_hover.jpg",
+        "tech": "React/NextJS",
+        "url_visit": "https://danielorchanian.fr/lessons"
+    },
     "saleth": {
         "type": "personal",
         "name": "Saleth.fr",

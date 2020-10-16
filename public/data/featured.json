@@ -2,6 +2,10 @@
     "home": [
         {
             "collection": "projects",
+            "id": "coursjs"
+        },
+        {
+            "collection": "projects",
             "id": "saleth"
         },
         {

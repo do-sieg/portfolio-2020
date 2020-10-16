@@ -11,7 +11,7 @@ export function LessonAuthor({ noBorder, altHeading }) {
                 </div>
 
                 <div className="author-bio-block">
-                    <h2>{altHeading ? "Bienvenue" : "À propos de l'auteur"}</h2>
+                    <h2>{altHeading ? altHeading : "À propos de l'auteur"}</h2>
                     <p>Bonjour, je suis Daniel, développeur web et enseignant, passionné par tout ce qui touche au code.</p>
                     <p>
                         Je mets ces cours à disposition des débutants pour les aider à s'y retrouver un peu. C'est le fruit de mes expériences en développement, et tiennent compte des plus récentes mises à jour.

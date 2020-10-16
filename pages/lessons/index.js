@@ -5,7 +5,7 @@ import { LSN_TITLE, LSN_SUBTITLE } from "../../config/constants";
 export default function Lessons() {
     return (
         <LessonsLayout className="lesson-page" headTitle={`${LSN_TITLE} - ${LSN_SUBTITLE}`}>
-            <LessonAuthor noBorder altHeading />
+            <LessonAuthor noBorder altHeading={`Bienvenue sur ${LSN_TITLE}`} />
         </LessonsLayout>
     );
 }
