@@ -1,6 +1,6 @@
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { U_WEBSITE, U_KELPROF, U_VOSCOURS } from '../config/constants';
+import { U_WEBSITE, U_KELPROF, U_VOSCOURS, U_SUPERPROF } from '../config/constants';
 
 export function LessonAuthor({ noBorder, altHeading }) {
     return (
@@ -23,6 +23,7 @@ export function LessonAuthor({ noBorder, altHeading }) {
             <p className="author-contact-block">
                 Je donne également des cours particuliers. Vérifiez mes disponibilités sur les sites suivants ou contactez-moi sur <a href="mailto:d.orchanian@gmail.com">d.orchanian@gmail.com</a>.
                 <a className="teach-link" href={U_KELPROF} target="_blank">Kelprof <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                <a className="teach-link" href={U_SUPERPROF} target="_blank">Superprof <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
                 <a className="teach-link" href={U_VOSCOURS} target="_blank">Voscours <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
             </p>
         </div>

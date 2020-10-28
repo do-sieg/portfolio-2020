@@ -197,9 +197,6 @@
 .lesson-page li {
   line-height: 1.5;
 }
-.lesson-page code {
-  color: #eee;
-}
 .lesson-page .disclaimer {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;

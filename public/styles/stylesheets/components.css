@@ -677,7 +677,8 @@ footer a {
 .markdown code {
   padding: 0.2rem 0.5rem;
   white-space: pre-wrap;
-  background-color: #272822;
+  background-color: white;
+  color: orangered;
 }
 .markdown pre code {
   padding: 0;

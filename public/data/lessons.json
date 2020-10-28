@@ -6,13 +6,23 @@
             {
                 "title": "Débuter avec NodeJS",
                 "lessons": {
-                    "0": "1-1-creer-projet-node",
-                    "1": "1-2-dependances",
-                    "2": "1-3-environnements",
-                    "3": "1-4-amelioration-nodemon",
-                    "4": "1-5-amelioration-es6-babel",
-                    "5": "1-6-introduire-express",
-                    "6": "1-7-modules-installation-migration"
+                    "0": "1-creer-projet-node",
+                    "1": "2-dependances",
+                    "2": "3-environnements",
+                    "3": "4-amelioration-nodemon",
+                    "4": "5-amelioration-es6-babel",
+                    "5": "6-introduire-express",
+                    "6": "7-modules-installation-migration"
+                }
+            },
+            {
+                "title": "Bases de données et sécurité",
+                "lessons": {
+                    "7": "8-gerer-base-de-donnees-mysql",
+                    "8": "9-premiere-requete-mysql",
+                    "9": "10-creer-une-route-users",
+                    "10": "11-reponses-au-client",
+                    "11": "12-endpoints-et-postman"
                 }
             }
         ]

@@ -28,6 +28,7 @@ export default function LessonsMenu() {
 
                             {Object.entries(section.lessons).map(([lessonIndex, id]) => {
                                 const data = context.lessons[id];
+                                console.log(lessonIndex, id, data);
 
                                 if (data) {
 
