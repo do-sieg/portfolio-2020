@@ -3,6 +3,7 @@ export const DEV_EMAIL = "d.orchanian@gmail.com";
 
 export const LSN_TITLE = "CoursJS";
 export const LSN_SUBTITLE = "Apprendre à coder en Javascript";
+export const LSN_MOST_RECENT_PERIOD = 7;
 
 export const U_WEBSITE = "https://danielorchanian.fr";
 export const U_EMAIL = "mailto:d.orchanian@gmail.com";

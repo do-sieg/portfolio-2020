@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LessonsContext, TYPE_CODE, TYPE_THEORY } from "../utils/lessons";
 import NavLink from "./NavLink";
 import lessonsDataTree from '../public/data/lessons.json';
+import { LSN_MOST_RECENT_PERIOD } from "../config/constants";
 
 export default function LessonsMenu() {
     const context = useContext(LessonsContext);
+    let [mostRecentDate, setMostRecentDate] = useState(null);
 
     function NumTag({ children, className }) {
         return (
@@ -15,9 +17,13 @@ export default function LessonsMenu() {
     }
 
     function renderLessonPlan(lessonCategory) {
+        // let mostRecentDate;
+        const todayDate = new Date(Date.now());
         return (
             <>
                 {Object.values(lessonsDataTree[lessonCategory].plan).map((section, index) => {
+
+
                     return (
                         <React.Fragment key={index}>
 
@@ -28,7 +34,14 @@ export default function LessonsMenu() {
 
                             {Object.entries(section.lessons).map(([lessonIndex, id]) => {
                                 const data = context.lessons[id];
-                                console.log(lessonIndex, id, data);
+
+                                if (!mostRecentDate || new Date(data.date) > new Date(mostRecentDate)) {
+                                    mostRecentDate = data.date;
+                                    setMostRecentDate(data.date);
+                                }
+                                
+                                const daysDiff = Math.round((new Date(todayDate) - new Date(data.date)) / (1000*60*60*24));
+                                const isRecent = daysDiff <= LSN_MOST_RECENT_PERIOD || data.date === mostRecentDate;
 
                                 if (data) {
 
@@ -43,6 +56,7 @@ export default function LessonsMenu() {
                                     return (
                                         // <NavLink key={lessonIndex} href={`/lessons/${id}`}>
                                         <NavLink className="nav-button" key={lessonIndex} href={`/lessons/${lessonCategory}/${id}`}>
+                                            {isRecent && <div className="new-tag">NEW</div>}
                                             <NumTag className={"lesson " + typeClassName}>{parseInt(lessonIndex, 10) + 1}</NumTag>
                                             <span>{data.title}</span>
                                         </NavLink>

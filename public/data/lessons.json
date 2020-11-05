@@ -22,7 +22,9 @@
                     "8": "9-premiere-requete-mysql",
                     "9": "10-creer-une-route-users",
                     "10": "11-reponses-au-client",
-                    "11": "12-endpoints-et-postman"
+                    "11": "12-endpoints-et-postman",
+                    "12": "13-creer-requete-insertion",
+                    "13": "14-introduire-body-parser-et-route-ajout-utilisateur"
                 }
             }
         ]

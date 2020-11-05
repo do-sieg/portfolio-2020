@@ -68,6 +68,7 @@
   line-height: 1.5rem;
 }
 .lesson-nav .nav-button {
+  position: relative;
   color: #eee;
   background-color: #83705d;
   background-image: linear-gradient(#83705d, #765);
@@ -75,6 +76,17 @@
 }
 .lesson-nav .nav-button:hover {
   color: #f5cbc5;
+}
+.lesson-nav .nav-button .new-tag {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.2rem;
+  z-index: 1;
+  font-family: Kufam;
+  font-size: x-small;
+  font-weight: bold;
+  color: #ffb733;
+  text-shadow: 0.1rem 0.1rem #0005;
 }
 .lesson-nav a {
   display: flex;
@@ -162,8 +174,18 @@
   border-bottom: solid 0.1rem #976;
   font-family: Kufam;
 }
-.lesson-author .author-contact-block .teach-link {
+.lesson-author .author-contact-block .teach-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 980px) {
+  .lesson-author .author-contact-block .teach-links {
+    flex-direction: column;
+  }
+}
+.lesson-author .author-contact-block .teach-links a {
   display: block;
+  min-width: 7.5rem;
   margin: 0.5rem 1.5rem;
 }
 .lesson-page {

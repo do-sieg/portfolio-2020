@@ -30,6 +30,7 @@ export function getAllLessons(typePath) {
                     fileName,
                     title: data.data.title,
                     type: data.data.type,
+                    date: data.data.date,
                 };
             }
         }

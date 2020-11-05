@@ -22,9 +22,11 @@ export function LessonAuthor({ noBorder, altHeading }) {
 
             <p className="author-contact-block">
                 Je donne également des cours particuliers. Vérifiez mes disponibilités sur les sites suivants ou contactez-moi sur <a href="mailto:d.orchanian@gmail.com">d.orchanian@gmail.com</a>.
-                <a className="teach-link" href={U_KELPROF} target="_blank">Kelprof <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
-                <a className="teach-link" href={U_SUPERPROF} target="_blank">Superprof <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
-                <a className="teach-link" href={U_VOSCOURS} target="_blank">Voscours <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                <div className="teach-links">
+                    <a href={U_KELPROF} target="_blank">Kelprof <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                    <a href={U_SUPERPROF} target="_blank">Superprof <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                    <a href={U_VOSCOURS} target="_blank">Voscours <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                </div>
             </p>
         </div>
     );

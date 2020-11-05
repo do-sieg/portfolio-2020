@@ -98,12 +98,28 @@
     }
 
     .nav-button {
+        position: relative;
+
         color: @c-white;
         background-color: lighten(@lsn-menu-bg, 4%);
         background-image: linear-gradient(lighten(@lsn-menu-bg, 4%), @lsn-menu-bg);
         border-color: lighten(@lsn-menu-bg, 15%);
         &:hover {
             color: lighten(@lsn-link-hover, 20%);
+        }
+
+        .new-tag {
+            position: absolute;
+            top: -0.5rem;
+            right: -0.2rem;
+            z-index: 1;
+
+            font-family: Kufam;
+            font-size: x-small;
+            font-weight: bold;
+            // font-style: italic;
+            color: lighten(orange, 10%);
+            text-shadow: 0.1rem 0.1rem #0005;
         }
     }
 
@@ -204,9 +220,17 @@
     }
 
     .author-contact-block {
-        .teach-link {
-            display: block;
-            margin: 0.5rem 1.5rem;
+        .teach-links {
+            display: flex;
+            flex-wrap: wrap;
+            @media screen and (max-width: 980px) {
+                flex-direction: column;
+            }
+            a {
+                display: block;
+                min-width: 7.5rem;
+                margin: 0.5rem 1.5rem;
+            }
         }
     }
 }

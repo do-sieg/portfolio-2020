@@ -25,21 +25,21 @@ export default function NodeLessons({ lessons }) {
                 <p>Une application NodeJS repose sur des <span className="keyword">dépendances</span> gérées par NPM. Le développeur peut importer des libraires réutilisables. Des milliers de ces modules sont mis à disposition par une communauté très dynamique.</p>
 
                 <h2>C. Comment fonctionnent les cours ?</h2>
-                <p>Je crois qu'un cours devrait se différencier :
-                    <ul>
-                        <li>d'une simple documentation ou d'un manuel de référence</li>
-                        <li>d'un bête copier-coller de code</li>
-                    </ul>
-                </p>
+                <p>Je crois qu'un cours devrait se différencier :</p>
+                <ul>
+                    <li>d'une simple documentation ou d'un manuel de référence</li>
+                    <li>d'un bête copier-coller de code</li>
+                </ul>
+
 
                 <p>En conséquence, le cours va consister en la simple <span className="keyword">création d'un projet</span> très basique, qu'on va ensuite améliorer en <span className="keyword">explorant d'autres aspects de l'environnement NodeJS</span>.</p>
                 <p>Par exemple, les premiers cours porteront sur le simple routage de l'application, mais les questions de sécurité seront abordées plus loin.</p>
-                <p>Certaines leçons du cours sont plus <span className="keyword">théoriques</span>. On y aborde des sujets comme :
-                    <ul>
-                        <li>les <span className="keyword">bonnes pratiques</span> et les standards du web</li>
-                        <li>les questions de <span className="keyword">logique</span> rencontrées au cours du développement backend</li>
-                    </ul>
-                </p>
+                <p>Certaines leçons du cours sont plus <span className="keyword">théoriques</span>. On y aborde des sujets comme :</p>
+                <ul>
+                    <li>les <span className="keyword">bonnes pratiques</span> et les standards du web</li>
+                    <li>les questions de <span className="keyword">logique</span> rencontrées au cours du développement backend</li>
+                </ul>
+
 
                 <p className="disclaimer">
                     Attention !
