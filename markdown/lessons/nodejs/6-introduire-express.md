@@ -43,50 +43,31 @@ Contrairement à Nodemon, Express est une dépendance qui sera utilisée en prod
 
 Le titre est un peu pompeux mais le code que nous allons ajouter est simple.
 
-Ouvrez **index.js/server.js**. Normalement, si vous avez suivi toutes les étapes, voici à quoi ressemble votre code :
+Ouvrez **index.js/server.js**. Nous allons **réécrire tout le code**.
 
 ```js
 // Modules
-import http from 'http';
+import express from 'express';
 
 // Mise en place du serveur
-const server = http.createServer();
+const app = express();
 
 // Écoute du port
 const PORT = 3088;
-server.listen(PORT);
-server.on('listening', () => console.log(`Server started on port ${PORT}`))
+app.listen(PORT, () => console.log(`Serveur actif sur le port ${PORT}`));
 ```
 
-En haut, sous l'import déjà présent, ajoutez :
-
-```js
-import express from 'express';
-```
-
-Ensuite, remplacez cette ligne :
-
-```js
-const server = http.createServer();
-```
-
-par :
-
-```js
-const app = express();
-const server = http.createServer(app);
-```
-
-On notera que tout ce qu'on a fait, c'est créer une constante `app`, qui est une instance d'express, et qu'on l'a placée en paramètre de création du serveur http.  
+On notera que tout ce qu'on a fait, c'est créer une constante `app`, qui est une instance d'express.
 
 Dorénavant, tout le travail qu'on effectuera avec express sera ciblé sur cette constante `app`.
 
 
 ## C. Étape 3 - Créer des routes
 
-Pour vérifier que ça fonctionne, nous allons créer deux routes :
+Pour vérifier que ça fonctionne, nous allons créer deux routes. Ajoutez ceci en fin de code :
 
 ```js
+// Test (à supprimer)
 app.get("/route_1", async (req, res, next) => {
     res.send('Bienvenue sur la route 1.');
 });
@@ -104,7 +85,7 @@ Un des principes en programmation Javascript, c'est de diviser le code en partie
 
 Par exemple, **transpiler.js** se charge de la transpilation (et rien d'autre) et **index.js/server.js** est le serveur.
 
-Sauf que... en introduisant le routage dans ce dernier, nous avons commencé à mélanger les choses.
+Sauf que... en introduisant les routes dans ce fichier, nous avons commencé à mélanger les choses.
 
 Le **routage** est une partie de l'application assez importante pour mériter son script à part, ne serait-ce que par souci d'organisation. Si on constate un problème dans les routes, on ne veut pas avoir :
 - la définition du serveur
@@ -142,44 +123,52 @@ On crée donc une instance de routeur, on lui ajoute une route `GET` et on l'exp
 
 Passons maintenant à la suite : lier le routeur au serveur express.
 
-Dans la racine du projet, créez un fichier **router.js**.
+À la **racine du projet**, créez un fichier **router.js**.
 
 Ajoutez-y ce code :
 
 ```js
+// Modules
+import express from 'express';
+
 // Importation des routes
 import testRouter from './routes/testRouter';
 
-export function withRoutes(app) {
+// Création du routeur
+const router = express.Router();
 
-    // Insérer les routes ici
-    app.use('/test', testRouter)
+// Route de base
+router.get("/", async (req, res, next) => {
+    res.send('Bienvenue sur mon application.');
+});
 
-    return app;
-}
+// Insérer les routes ici
+router.use('/test', testRouter);
+
+export default router;
 ```
 
 Enfin, dans **index.js/server.js**, après :
+
 ```js
 import express from 'express';
 ```
 on ajoute :
 ```js
-import { withRoutes } from './router';
+import router from './router';
 ```
 
-Puis, remplacez :
+Puis, en fin de fichier, ajoutez :
+
 ```js
-const server = http.createServer(app);
-```
-par :
-```js
-const server = http.createServer(withRoutes(app));
+// Routage
+app.use(router);
 ```
 
 Pour vérifier que tout fonctionne, entrez `http://localhost:3088/test` dans le navigateur et si vous obtenez le message, tout fonctionne.
 
 Résumons ce que nous avons fait :
 - Nous avons introduit **Express** sous la forme de la constante `app` pour faciliter la mise en place des routes.
-- Nous avons séparé notre code pour le rendre plus facile à maintenir, grâce notamment à la fonction `withRoutes` qui va englober `app` et lui ajouter ses routes.  
+- Nous avons séparé notre code pour le rendre plus facile à maintenir, grâce notamment au fichier **router.js** qui va gérer les routes localement.  
 Cette étape n'était pas obligatoire mais elle rend les choses plus simples en distinguant le routage du reste de la logique du serveur.
+- Enfin, nous avons créé un sous-routeur dans **routes/testRouter.js**, qui gérera toutes les routes commençant par `/test/`.

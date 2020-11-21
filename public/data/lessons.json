@@ -24,7 +24,7 @@
                     "10": "11-reponses-au-client",
                     "11": "12-endpoints-et-postman",
                     "12": "13-creer-requete-insertion",
-                    "13": "14-introduire-body-parser-et-route-ajout-utilisateur"
+                    "13": "14-creer-une-route-ajout-utilisateur-et-gerer-corps-de-requetes"
                 }
             }
         ]

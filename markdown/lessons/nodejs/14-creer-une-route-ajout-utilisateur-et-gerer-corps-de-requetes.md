@@ -1,11 +1,11 @@
 ---
-title: "Introduire Body-parser et créer une route d'ajout d'utilisateur"
+title: "Créer une route d'ajout d'utilisateur et gérer les corps de requêtes"
 type: 0
-date: '2020-11-05'
+date: '2020-11-20'
 published: true
 ---
 
-# Leçon 14 - Introduire Body-parser et créer une route d'ajout d'utilisateur
+# Leçon 14 - Créer une route d'ajout d'utilisateur et gérer les corps de requêtes
 
 Nous en étions restés à la création de la fonction d'ajout d'utilisateur. Il faut maintenant passer à la route qui va lancer cette fonction.
 
@@ -56,36 +56,23 @@ Mais il faut changer un peu le projet pour pouvoir correctement recevoir le corp
 
 ## C. Étape 2 - Retoucher le code pour gérer les requêtes avec body
 
-En l'état, Express ne reconnaît pas `req.body`. Il faut ajouter un module qui va l'aider : **body-parser**.
+En l'état, Express ne reconnaît pas `req.body`. Il faut y ajouter un petit quelque chose qui va l'aider.
 
-**Body-parser** est souvent une prise de tête pour les développeurs NodeJS. En effet, très régulièrement, soit il est inclus avec Express, soit il dégage à la version suivante. Et rebelote...
-
-À l'heure où cette leçon est rédigée, il n'est **plus inclus dans Express**. Nous allons donc devoir l'installer séparément.
-
-```
-npm i body-parser
-```
-
-Ensuite, ouvrez **index.js/server.js**, et ajoutez au début :
+Ouvrez **index.js/server.js**, et trouvez ces lignes :
 
 ```js
-import bodyParser from 'body-parser';
+// Mise en place du serveur
+const app = express();
 ```
 
-Plus bas, **AVANT** le routage :
+Juste en-dessous, ajoutez ces deux lignes :
 
 ```js
-const server = http.createServer(withRoutes(app));
+app.use(express.json()); // pour les corps de requête JSON
+app.use(express.urlencoded({ extended: false })); // pour les corps de requête x-www-form-url
 ```
 
-Ajoutez ces deux lignes :
-
-```js
-app.use(bodyParser.json()); // pour les corps de requête JSON
-app.use(bodyParser.urlencoded({ extended: false })); // pour les corps de requête x-www-form-url
-```
-
-> Il est très important que ces lignes apparaissent avec la création de la constante `server` et de son routage (fonction `withRoutes`). Sans cela, `req.body` ne sera pas reconnu sur vos routes.
+> Il est très important que ces lignes apparaissent avant le routage. Sans cela, `req.body` ne sera pas reconnu sur vos routes.
 
 
 ## D. Étape 3 - Tester la route avec Postman
